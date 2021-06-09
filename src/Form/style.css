@@ -1,0 +1,203 @@
+.form__fieldset {
+  box-shadow: 6px 6px 19px 0px rgba(47, 50, 50, 0.54);
+  border-radius: 5px;
+  border: none;
+  background-image: url('https://www.researchgate.net/profile/M-Basri/publication/320925728/figure/fig3/AS:631619933192230@1527601335529/India-GDP-Growth-Interest-Rate-Forex-Reserves-Exchange-Rates-and-Current-Account.png');
+  background-position: center;
+  background-size: cover right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 30;
+}
+
+.form__fieldset::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #cfdde3c1;
+  border-radius: 5px;
+  position: absolute;
+  z-index: -10;
+}
+
+.form__paragraph {
+  margin-bottom: 10px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  color: #186889;
+}
+
+.form__list {
+  padding: 10px;
+  list-style: none;
+}
+
+.form__labelText {
+  display: inline-block;
+  padding: 8px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #186889;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  background-color: #9ac0d8d7;
+}
+
+.form__labelText--middle {
+  margin-top: 30px;
+}
+
+.form__labelText--last {
+  margin-top: 40px;
+}
+
+
+/*  common styles for select and input number */
+.form__selectVisual-select,
+.form__amountVisual-input {
+  padding: 8px 30px 8px 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-color: #4d5061c1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  border: none;
+  border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  outline: none;
+}
+
+
+.form__selectVisual-select {
+  display: inline-block;
+  min-height: 35px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.79);
+  cursor: pointer;
+}
+
+
+.form__selectVisual {
+  position: relative;
+}
+
+.form__selectVisual--arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 2rem;
+  background-color: #3b3c47;
+  pointer-events: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.form__selectVisual--arrow::before,
+.form__selectVisual--arrow::after {
+  --size: 5px;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.form__selectVisual--arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid rgba(255, 255, 255, 0.79);
+}
+
+
+
+
+.form__selectVisual-select:focus+.focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 1.5px solid #186889;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form__amountVisual {
+  position: relative;
+}
+
+.form__amountVisual-input {
+  min-height: 35px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.79);
+}
+
+.form__amountVisual-input:focus+.focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 1.5px solid #186889;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form__information {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin-top: 35px;
+  background-color: #9ac0d8d7;
+}
+
+.form__text {
+  padding-left: 10px;
+  font-size: 20px;
+  color: #3b3c47;
+}
+
+.form__footer {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  color: rgba(255, 255, 255, 0.79);
+  background-color: #4d5061c1;
+  letter-spacing: 1px;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.form__button:hover {
+  transform: translateY(-1px);
+}
+
+.form__button:focus {
+  border: 2px solid #186889;
+}
+
+.form__button:active {
+  background-color: #3b3c47;
+  transform: translateY(3px);
+}
