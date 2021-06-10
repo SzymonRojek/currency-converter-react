@@ -1,4 +1,5 @@
 import "./style.css";
+import { useState } from "react";
 
 const Select = () => {
   return (
@@ -13,8 +14,17 @@ const Select = () => {
 };
 
 const Form = () => {
+  const [amount, setAmount] = useState("");
+  const onFormSubmit = event => {
+    event.preventDefault();
+    
+  console.log(amount)
+  };
+
   return (
-    <form className="form">
+    <form 
+    onSubmit={onFormSubmit}
+    className="form">
       <fieldset className="form__fieldset">
         <p className="form__paragraph">*fields required</p>
           <ul className="form__list">
@@ -41,6 +51,8 @@ const Form = () => {
                 </span>
                 <div className="form__amountVisual">
                   <input 
+                    value={amount}
+                    onChange={({ target }) => setAmount(target.value)}
                     className="form__amountVisual-input" 
                     type="number" 
                     name="amount" 
