@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Currency Converter
+
+## 🎥  Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Technologies used:
+
+<table>
+  <tr>
+    <td><img src="./src/images/npm-icon.png" width="50" height="50"></td>
+    <td><img src="./src/images/jsx-icon.png" width="50" height="50"></td>
+    <td><img src="./src/images/react.jpeg" width="80" height="50"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src="./src/images/flexbox-icon.png" width="50" height="50"></td>
+    <td><img src="./src/images/css-icon.svg" width="50" height="50"> </td>
+  </tr>
+ </table>
+
+
 
 ## Available Scripts
 
