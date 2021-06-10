@@ -1,5 +1,17 @@
 import "./style.css";
 
+const Select = () => {
+  return (
+    <div className="form__selectVisual">
+      <select className="form__selectVisual-select" name="currencyHave">
+        <option value="search"></option>
+      </select>
+    <span className="focus"></span>
+    <span className="form__selectVisual form__selectVisual--arrow"></span>
+  </div>
+  );
+};
+
 const Form = () => {
   return (
     <form className="form">
@@ -11,13 +23,7 @@ const Form = () => {
                 <span className="form__labelText">
                   Currency from*:
                 </span>
-                <div className="form__selectVisual">
-                  <select className="form__selectVisual-select" name="currencyHave">
-                    <option value="search"></option>
-                  </select>
-                  <span className="focus"></span>
-                  <span className="form__selectVisual form__selectVisual--arrow"></span>
-                </div>
+                <Select />
               </label>
             </li>
             <li>
@@ -25,19 +31,13 @@ const Form = () => {
                 <span className="form__labelText form__labelText--middle">
                   Currency to*:
                 </span>
-                <div className="form__selectVisual">
-                  <select className="form__selectVisual-select" name="currencyExchange">
-                    <option value="search"></option>
-                  </select>
-                  <span className="focus"></span>
-                  <span className="form__selectVisual form__selectVisual--arrow"></span>
-                </div>
+                <Select />
               </label>
             </li>
             <li>
               <label className="form__label">
                 <span className="form__labelText form__labelText--last">
-                  Amount<strong className="js-labelText--last"></strong>*:
+                  Amount*:
                 </span>
                 <div className="form__amountVisual">
                   <input 
