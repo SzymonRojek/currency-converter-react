@@ -1,11 +1,19 @@
 import "./style.css";
 import { useState } from "react";
+import currencies from '../currencies';
 
 const Select = () => {
   return (
     <div className="form__selectVisual">
-      <select className="form__selectVisual-select" name="currencyHave">
-        <option value="search"></option>
+      <select 
+        className="form__selectVisual-select"
+      >
+        {currencies.map(currency => (
+                <option key={currency.id}>
+                  {currency.fullName}
+                </option>)
+        )}
+        
       </select>
       <span className="focus"></span>
       <span className="form__selectVisual form__selectVisual--arrow"></span>
@@ -13,7 +21,7 @@ const Select = () => {
   );
 };
 
-const Form = () => {
+const Form = ({ currencies }) => {
   const [amount, setAmount] = useState("");
   const onFormSubmit = event => {
     event.preventDefault();
