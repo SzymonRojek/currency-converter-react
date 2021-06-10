@@ -6,9 +6,9 @@ const Select = () => {
       <select className="form__selectVisual-select" name="currencyHave">
         <option value="search"></option>
       </select>
-    <span className="focus"></span>
-    <span className="form__selectVisual form__selectVisual--arrow"></span>
-  </div>
+      <span className="focus"></span>
+      <span className="form__selectVisual form__selectVisual--arrow"></span>
+    </div>
   );
 };
 
