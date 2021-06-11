@@ -93,6 +93,7 @@ const Form = () => {
                     min="1" 
                     step="any" 
                     placeholder="type here" 
+                    required
                   />
                   <span className="focus"></span>
                 </div>
