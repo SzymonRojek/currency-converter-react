@@ -1,19 +1,27 @@
 import "./style.css";
 import { useState } from "react";
 import currencies from '../currencies';
-
+import Result from '../Result';
 
 const Form = () => {
   const [amount, setAmount] = useState("");
   const [currencyFrom, setCurrencyFrom] = useState("search");
   const [currencyTo, setCurrencyTo] = useState("search");
   const currenciesToExchange = currencies.find( ({ fullName }) => fullName === currencyFrom);
+  const [result, setResult] = useState();
+
+  const calculateResult = (amount, rate) => +amount * rate;
 
   const onFormSubmit = event => {
     event.preventDefault();
   
     const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
+   
+ 
+    const result = calculateResult(amount, getRateCurrencyTo);
+    setResult({ value: result })
 
+    console.log(result)
   };
 
   return (
@@ -90,9 +98,7 @@ const Form = () => {
                 </div>
               </label>
             </li>
-            <li className="form__information">
-              <p className="form__text">Choose currencies</p>
-            </li>
+            <Result result={result} />
           </ul>
           <div className="form__footer">
             <button className="form__button">Count Amount</button>
