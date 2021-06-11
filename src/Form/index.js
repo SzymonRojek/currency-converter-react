@@ -2,31 +2,18 @@ import "./style.css";
 import { useState } from "react";
 import currencies from '../currencies';
 
-const Select = () => {
-  return (
-    <div className="form__selectVisual">
-      <select 
-        className="form__selectVisual-select"
-      >
-        {currencies.map(currency => (
-                <option key={currency.id}>
-                  {currency.fullName}
-                </option>)
-        )}
-        
-      </select>
-      <span className="focus"></span>
-      <span className="form__selectVisual form__selectVisual--arrow"></span>
-    </div>
-  );
-};
 
-const Form = ({ currencies }) => {
+const Form = () => {
   const [amount, setAmount] = useState("");
+  const [currencyFrom, setCurrencyFrom] = useState("search");
+  const [currencyTo, setCurrencyTo] = useState("search");
+  const currenciesToExchange = currencies.find( ({ fullName }) => fullName === currencyFrom);
+
   const onFormSubmit = event => {
     event.preventDefault();
-    
-  console.log(amount)
+  
+    const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
+
   };
 
   return (
@@ -41,7 +28,23 @@ const Form = ({ currencies }) => {
                 <span className="form__labelText">
                   Currency from*:
                 </span>
-                <Select />
+
+                <div className="form__selectVisual">
+                  <select 
+                  value={currencyFrom}
+                  onChange={({ target }) => setCurrencyFrom(target.value)}
+                  className="form__selectVisual-select"
+                  >
+                    {currencies.map(currency => (
+                      <option key={currency.id}>
+                        {currency.fullName}
+                      </option>)
+                    )}
+
+                  </select>
+                  <span className="focus"></span>
+                  <span className="form__selectVisual form__selectVisual--arrow"></span>
+                </div>
               </label>
             </li>
             <li>
@@ -49,7 +52,22 @@ const Form = ({ currencies }) => {
                 <span className="form__labelText form__labelText--middle">
                   Currency to*:
                 </span>
-                <Select />
+                <div className="form__selectVisual">
+                  <select 
+                    value={currencyTo}
+                    onChange={({ target }) => setCurrencyTo(target.value)}
+                    className="form__selectVisual-select"
+                  >
+                    {currencies.map(currency => (
+                            <option key={currency.id}>
+                              {currency.fullName}
+                            </option>)
+                    )}
+
+                  </select>
+                  <span className="focus"></span>
+                  <span className="form__selectVisual form__selectVisual--arrow"></span>
+                </div>
               </label>
             </li>
             <li>
