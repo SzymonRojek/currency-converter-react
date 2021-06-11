@@ -14,20 +14,20 @@ const Form = () => {
 
   const onFormSubmit = event => {
     event.preventDefault();
-  
-    const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
-   
+    let getRateCurrencyTo = null;
+
+    if (currencyFrom !== "search" && currencyTo !== "search") {
+      getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
+    }
  
     const result = calculateResult(amount, getRateCurrencyTo);
-    setResult({ value: result })
-
-    console.log(result)
+    setResult({ value: result });
   };
 
   return (
     <form 
-    onSubmit={onFormSubmit}
-    className="form">
+      onSubmit={onFormSubmit}
+      className="form">
       <fieldset className="form__fieldset">
         <p className="form__paragraph">*fields required</p>
           <ul className="form__list">
@@ -98,7 +98,10 @@ const Form = () => {
                 </div>
               </label>
             </li>
-            <Result result={result} />
+            <li className="form__information">
+              <Result result={result} />
+            </li>
+     
           </ul>
           <div className="form__footer">
             <button className="form__button">Count Amount</button>
