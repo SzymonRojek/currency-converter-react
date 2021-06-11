@@ -1,5 +1,9 @@
 const currencies = [  
   {
+    id: 'search',
+    fullName: 'search'
+  },
+  {
     id : 'PL',
     fullName : '🇵🇱 Polish Zloty', 
     exchangeTo : [
@@ -66,27 +70,27 @@ const currencies = [
     fullName : '🇪🇺 Euro',
     exchangeTo : [
       {
-        short : 'PL',
+        id : 'PL',
         fullName : '🇵🇱 Polish Zloty', 
         rate : 4.56386
       },
       {
-        short : 'GBP',
+        id : 'GBP',
         fullName : '🇬🇧 British Pound', 
         rate : 0.86851 
       },
       {
-        short : 'US',
+        id : 'US',
         fullName : '🇺🇸 US Dollar', 
         rate : 1.20878
       },
       {
-        short : 'RUB',
+        id : 'RUB',
         fullName : '🇷🇺 Russian Rouble', 
         rate : 90.2726
       },
       {
-        short : 'ESP',
+        id : 'ESP',
         fullName : '🇪🇸 Spanish Peseta', 
         rate : 166.386
       }
@@ -97,27 +101,27 @@ const currencies = [
     fullName : '🇺🇸 US Dollar', 
     exchangeTo : [
       {
-        short : 'PL',
+        id : 'PL',
         fullName : '🇵🇱 Polish Zloty', 
         rate : 3.78578
       },
       {
-        short : 'GBP',
+        id : 'GBP',
         fullName : '🇬🇧 British Pound', 
         rate : 0.71937 
       },
       {
-        short : 'EUR',
+        id : 'EUR',
         fullName : '🇪🇺 Euro',
         rate : 0.82718
       },
       {
-        short : 'RUB',
+        id : 'RUB',
         fullName : '🇷🇺 Russian Rouble', 
         rate : 74.6808
       },
       {
-        short : 'ESP',
+        id : 'ESP',
         fullName : '🇪🇸 Spanish Peseta', 
         rate : 137.632
       }
@@ -128,27 +132,27 @@ const currencies = [
     fullName : '🇷🇺 Russian Rouble', 
     exchangeTo :  [
       {
-        short : 'PL',
+        id : 'PL',
         fullName : '🇵🇱 Polish Zloty', 
         rate : 0.05066
       },
       {
-        short : 'GBP',
+        id : 'GBP',
         fullName : '🇬🇧 British Pound', 
         rate : 0.00963 
       },
       {
-        short : 'EUR',
+        id : 'EUR',
         fullName : '🇪🇺 Euro',
         rate : 0.01107
       },
       {
-        short : 'US',
+        id : 'US',
         fullName : '🇺🇸 US Dollar', 
         rate : 0.01338
       },
       {
-        short : 'ESP',
+        id : 'ESP',
         fullName : '🇪🇸 Spanish Peseta', 
         rate : 1.84161
       }
@@ -159,27 +163,27 @@ const currencies = [
     fullName : '🇪🇸 Spanish Peseta', 
     exchangeTo : [
       {
-        short : 'PL',
+        id : 'PL',
         fullName : '🇵🇱 Polish Zloty', 
         rate : 0.02750
       },
       {
-        short : 'GBP',
+        id : 'GBP',
         fullName : '🇬🇧 British Pound', 
         rate : 0.00523 
       },
       {
-        short : 'EUR',
+        id : 'EUR',
         fullName : '🇪🇺 Euro',
         rate : 0.00601
       },
       {
-        short : 'US',
+        id : 'US',
         fullName : '🇺🇸 US Dollar', 
         rate : 0.00726
       },
       {
-        short : 'RUB',
+        id : 'RUB',
         fullName : '🇷🇺 Russian Rouble', 
         rate : 0.54255
       }
