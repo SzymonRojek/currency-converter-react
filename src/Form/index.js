@@ -9,7 +9,7 @@ const Form = () => {
   const [currencyTo, setCurrencyTo] = useState("search");
   const currenciesToExchange = currencies.find( ({ fullName }) => fullName === currencyFrom);
   const [result, setResult] = useState();
-
+  const getIdCurrencyFrom = currencies.find( ({fullName}) => fullName === currencyFrom).id;
   const calculateResult = (amount, rate) => +amount * rate;
 
   const onFormSubmit = event => {
@@ -21,9 +21,11 @@ const Form = () => {
     }
 
     const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).id;
-    
+  
+
     const result = calculateResult(amount, getRateCurrencyTo);
     setResult({ value: result, id: getIdCurrencyTo });
+
   };
  
   return (
@@ -36,7 +38,7 @@ const Form = () => {
             <li>
               <label>
                 <span className="form__labelText">
-                  Currency from*:
+                  Currency from*: 
                 </span>
 
                 <div className="form__selectVisual">
@@ -83,10 +85,10 @@ const Form = () => {
             <li>
               <label className="form__label">
                 <span className="form__labelText form__labelText--last">
-                  Amount*:
+                   Amount{getIdCurrencyFrom !== "search" ? ` in ${getIdCurrencyFrom}` : ""}*:
                 </span>
                 <div className="form__amountVisual">
-                  <input 
+                  <input
                     value={amount}
                     onChange={({ target }) => setAmount(target.value)}
                     className="form__amountVisual-input" 
