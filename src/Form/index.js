@@ -19,11 +19,13 @@ const Form = () => {
     if (currencyFrom !== "search" && currencyTo !== "search") {
       getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
     }
- 
-    const result = calculateResult(amount, getRateCurrencyTo);
-    setResult({ value: result });
-  };
 
+    const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).id;
+    
+    const result = calculateResult(amount, getRateCurrencyTo);
+    setResult({ value: result, id: getIdCurrencyTo });
+  };
+ 
   return (
     <form 
       onSubmit={onFormSubmit}
