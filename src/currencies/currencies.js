@@ -4,39 +4,39 @@ const currencies = [
     name : '🇵🇱 Polish Zloty', 
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 26.6228 
       },
       { 
-        id: 'GBP',
+        id : 'GBP',
         name : '🇬🇧 British Pound', 
         rate : 0.18816 
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 5.65865 
       },
       {
-        id: 'CAD',
+        id : 'CAD',
         name : '🇨🇦 Canadian Dollar', 
         rate : 0.32654 
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 1.62299
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 1.62299
       },
       {
-        id: 'EUR',
+        id : 'EUR',
         name : '🇪🇺 Euro',
         rate : 0.21758
       },
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 1.43191
+        rate : 1.43191
       },
       {
         id : 'GIP',
@@ -44,12 +44,12 @@ const currencies = [
         rate : 0.18984
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 79.0143 
       },
       {
-        id: 'ITL',
+        id : 'ITL',
         name : '🇮🇹 Italian Lira', 
         rate : 422.675 
       },
@@ -80,42 +80,42 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.10092
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble', 
         rate : 19.7077 
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 6.57631 
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 36.3210 
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.26389 
       }
     ]
   },
   {
-    id: 'GBP',
+    id : 'GBP',
     name : '🇬🇧 British Pound',  
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 140.222 
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 29.8041 
       },
@@ -125,19 +125,19 @@ const currencies = [
         rate : 1.71986 
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 1.62299
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 1.62299
       },
       {
-        id: 'EUR',
+        id : 'EUR',
         name : '🇪🇺 Euro',
         rate : 1.14832
       },
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 1.43506
+        rate : 1.43506
       },
       {
         id : 'GIP',
@@ -145,12 +145,12 @@ const currencies = [
         rate : 1.00000
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 416.168
       },
       {
-        id: 'ITL',
+        id : 'ITL',
         name : '🇮🇹 Italian Lira', 
         rate : 2226.20
       },
@@ -181,7 +181,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.53340
       },
       {
@@ -190,33 +190,33 @@ const currencies = [
         rate : 5.21899
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble', 
         rate : 103.800
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 34.6369
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 191.300
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 1.38992
       }
     ]
   },
   {
-    id: 'EUR',
+    id : 'EUR',
     name : '🇪🇺 Euro',
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate :  121.948
       },
@@ -226,24 +226,24 @@ const currencies = [
         rate : 0.86851
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 25.9207
       },
       {
-        id: 'CAD',
+        id : 'CAD',
         name : '🇨🇦 Canadian Dollar', 
         rate : 1.49572
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 7.43527
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 7.43527
       },
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 6.55957
+        rate : 6.55957
       },
       {
         id : 'GIP',
@@ -251,12 +251,12 @@ const currencies = [
         rate : 0.86958
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 361.979
       },
       {
-        id: 'ITL',
+        id : 'ITL',
         name : '🇮🇹 Italian Lira', 
         rate : 1936.27
       },
@@ -287,7 +287,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.46202
       },
       {
@@ -296,33 +296,33 @@ const currencies = [
         rate : 4.56386
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble', 
         rate : 90.2726
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 30.1260
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 166.386
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 1.20878
       }
     ]
   },
   {
-    id: 'US',
+    id : 'US',
     name : '🇺🇸 US Dollar',
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate :  100.885
       },
@@ -332,19 +332,19 @@ const currencies = [
         rate : 0.71937
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 21.4431
       },
       {
-        id: 'CAD',
+        id : 'CAD',
         name : '🇨🇦 Canadian Dollar', 
         rate : 1.23738
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 6.15019
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 6.15019
       },
       {
         id : 'EUR',
@@ -354,7 +354,7 @@ const currencies = [
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 5.42597
+        rate : 5.42597
       },
       {
         id : 'GIP',
@@ -362,12 +362,12 @@ const currencies = [
         rate : 0.71937
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 299.419
       },
       {
-        id: 'ITL',
+        id : 'ITL',
         name : '🇮🇹 Italian Lira', 
         rate : 1601.65
       },
@@ -398,7 +398,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.38381
       },
       {
@@ -407,28 +407,28 @@ const currencies = [
         rate : 3.78578
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble', 
         rate : 74.6808
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate :  24.9197
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 137.632
       },
     ]
   },
   {
-    id: 'RUB',
+    id : 'RUB',
     name : '🇷🇺 Russian Rouble',
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 1.34992
       },
@@ -438,19 +438,19 @@ const currencies = [
         rate : 0.00963
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 0.28692
       },
       {
-        id: 'CAD',
+        id : 'CAD',
         name : '🇨🇦 Canadian Dollar', 
         rate : 0.01656
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 0.08229
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.08229
       },
       {
         id : 'EUR',
@@ -460,7 +460,7 @@ const currencies = [
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 0.07260
+        rate : 0.07260
       },
       {
         id : 'GIP',
@@ -468,12 +468,12 @@ const currencies = [
         rate : 0.00963
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 4.00644
       },
       {
-        id: 'ITL',
+        id : 'ITL',
         name : '🇮🇹 Italian Lira', 
         rate : 21.4312
       },
@@ -504,7 +504,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.00515
       },
       {
@@ -513,28 +513,28 @@ const currencies = [
         rate : 0.05066
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 0.33344
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 1.84161
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.01338
       },
     ]
   },
   {
-    id: 'ESP',
+    id : 'ESP',
     name : '🇪🇸 Spanish Peseta',
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 0.73292
       },
@@ -544,19 +544,19 @@ const currencies = [
         rate : 0.00523
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 0.15579
       },
       {
-        id: 'CAD',
+        id : 'CAD',
         name : '🇨🇦 Canadian Dollar', 
         rate : 0.00899
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 0.04469
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.04469
       },
       {
         id : 'EUR',
@@ -566,7 +566,7 @@ const currencies = [
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 0.03942
+        rate : 0.03942
       },
       {
         id : 'GIP',
@@ -574,12 +574,12 @@ const currencies = [
         rate : 0.00523
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 2.17554
       },
       {
-        id: 'ITL',
+        id : 'ITL',
         name : '🇮🇹 Italian Lira', 
         rate : 11.6372
       },
@@ -610,7 +610,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.00278
       },
       {
@@ -619,33 +619,33 @@ const currencies = [
         rate : 0.02750
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble',
         rate : 0.54255
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 0.18106
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 0.00601
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.00726
       },
     ]
   },
   {
-    id: 'ITL',
+    id : 'ITL',
     name : '🇮🇹 Italian Lira', 
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 0.06298
       },
@@ -655,19 +655,19 @@ const currencies = [
         rate : 0.00045
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 0.01339
       },
       {
-        id: 'CAD',
+        id : 'CAD',
         name : '🇨🇦 Canadian Dollar', 
         rate : 0.00077
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 0.00384
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.00384
       },
       {
         id : 'EUR',
@@ -677,7 +677,7 @@ const currencies = [
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 0.00339
+        rate : 0.00339
       },
       {
         id : 'GIP',
@@ -685,7 +685,7 @@ const currencies = [
         rate : 0.00045
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 0.18695
       },
@@ -716,7 +716,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.00024
       },
       {
@@ -725,33 +725,33 @@ const currencies = [
         rate : 0.00236
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble',
         rate : 0.04662
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 0.01556
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 0.08593
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.00062
       },
     ]
   },
   {
-    id: 'CAD',
+    id : 'CAD',
     name : '🇨🇦 Canadian Dollar',
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 81.5189
       },
@@ -761,14 +761,14 @@ const currencies = [
         rate : 0.58128
       },
       {
-        id: 'CZK',
+        id : 'CZK',
         name : '🇨🇿 Czech Koruna', 
         rate : 17.3268
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 4.96957
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 4.96957
       },
       {
         id : 'EUR',
@@ -786,7 +786,7 @@ const currencies = [
         rate : 0.58128
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 241.941
       },
@@ -831,33 +831,33 @@ const currencies = [
         rate : 3.05904
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble',
         rate : 60.3448
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 20.1360
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 111.211
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.80804
       },
     ]
   },
   {
-    id: 'CZK',
+    id : 'CZK',
     name : '🇨🇿 Czech Koruna', 
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 4.70172
       },
@@ -872,9 +872,9 @@ const currencies = [
         rate : 0.05767
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 0.28663
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.28663
       },
       {
         id : 'EUR',
@@ -884,7 +884,7 @@ const currencies = [
       {
         id : 'FRF',
         name : '🇫🇷 French Frank',
-        rate: 0.25289
+        rate : 0.25289
       },
       {
         id : 'GIP',
@@ -892,7 +892,7 @@ const currencies = [
         rate : 0.03353
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 13.9543
       },
@@ -928,7 +928,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.01792
       },
       {
@@ -937,33 +937,33 @@ const currencies = [
         rate : 0.17644
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble',
         rate : 3.48047
       },
       {
-        id: 'SKK',
+        id : 'SKK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 1.16143
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 6.41456
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.04660
       },
     ]
   },
   {
-    id: 'SKK',
+    id : 'SKK',
     name : '🇸🇰 Slovak Koruna', 
     exchangeTo : [
       {
-        id: 'ALL',
+        id : 'ALL',
         name : '🇦🇱 Albanian Lek', 
         rate : 4.04793
       },
@@ -983,9 +983,9 @@ const currencies = [
         rate : 0.04965
       },
       {
-        id: 'DKK',
-        name: '🇩🇰 Danish Krone',
-        rate: 0.24681
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.24681
       },
       {
         id : 'EUR',
@@ -1003,7 +1003,7 @@ const currencies = [
         rate : 0.02886
       },
       {
-        id: 'HUF',
+        id : 'HUF',
         name : '🇭🇺 Hungarian Forint', 
         rate : 12.0155
       },
@@ -1039,7 +1039,7 @@ const currencies = [
       },
       {
         id : 'OMR',
-        name: '🇴🇲 Omani Rial',
+        name : '🇴🇲 Omani Rial',
         rate : 0.01534
       },
       {
@@ -1048,19 +1048,231 @@ const currencies = [
         rate : 0.15191
       },
       {
-        id: 'RUB',
+        id : 'RUB',
         name : '🇷🇺 Russian Rouble',
         rate : 2.99650
       },
       {
-        id: 'ESP',
+        id : 'ESP',
         name : '🇪🇸 Spanish Peseta', 
         rate : 5.52300
       },
       {
-        id: 'US',
+        id : 'US',
         name : '🇺🇸 US Dollar', 
         rate : 0.04012
+      },
+    ]
+  },
+  {
+    id: 'HUF',
+    name : '🇭🇺 Hungarian Forint', 
+    exchangeTo : [
+      {
+        id : 'ALL',
+        name : '🇦🇱 Albanian Lek', 
+        rate : 0.33657
+      },
+      {
+        id : 'GBP',
+        name : '🇬🇧 British Pound',
+        rate : 0.00240
+      },
+      {
+        id : 'CZK',
+        name : '🇨🇿 Czech Koruna',
+        rate : 0.07154
+      },
+      {
+        id : 'CAD',
+        name : '🇨🇦 Canadian Dollar',
+        rate : 0.00413
+      },
+      {
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.02052
+      },
+      {
+        id : 'EUR',
+        name : '🇪🇺 Euro',
+        rate : 0.00276
+      },
+      {
+        id : 'FRF',
+        name : '🇫🇷 French Frank',
+        rate : 0.01810
+      },
+      {
+        id : 'GIP',
+        name : '🇬🇮 Gibraltar Pound',
+        rate : 0.00240
+      },
+      {
+        id : 'ITL',
+        name : '🇮🇹 Italian Lira',
+        rate : 5.34412
+      },
+      {
+        id : 'JPY',
+        name : '🇯🇵 Japanese Yen',
+        rate : 0.36
+      },
+      {
+        id : 'KZT',
+        name : '🇰🇿 Kazakhstan Tenge',
+        rate : 1.42721
+      },
+      {
+        id : 'LAK',
+        name : '🇱🇦 Lao Kip',
+        rate : 31.1899
+      },
+      {
+        id : 'MDL',
+        name : '🇲🇩 Moldovan Leu',
+        rate : 0.05927
+      },
+      {
+        id : 'NOK',
+        name : '🇳🇴 Norwegian Kroner',
+        rate : 0.02795
+      },
+      {
+        id : 'OMR',
+        name : '🇴🇲 Omani Rial',
+        rate : 0.00129
+      },
+      {
+        id : 'PL',
+        name : '🇵🇱 Polish Zloty',
+        rate : 0.01263
+      },
+      {
+        id: 'RUB',
+        name : '🇷🇺 Russian Rouble',
+        rate : 0.00598
+      },
+      {
+        id : 'SKK',
+        name : '🇸🇰 Slovak Koruna',
+        rate : 0.08315
+      },
+      {
+        id: 'ESP',
+        name : '🇪🇸 Spanish Peseta', 
+        rate : 0.45923
+      },
+      {
+        id: 'US',
+        name : '🇺🇸 US Dollar', 
+        rate : 0.00334
+      },
+    ]
+  },
+  {
+    id: 'ALL',
+    name : '🇦🇱 Albanian Lek', 
+    exchangeTo : [
+      {
+        id : 'GBP',
+        name : '🇬🇧 British Pound',
+        rate : 0.00699
+      },
+      {
+        id : 'CZK',
+        name : '🇨🇿 Czech Koruna',
+        rate : 0.20834
+      },
+      {
+        id : 'CAD',
+        name : '🇨🇦 Canadian Dollar',
+        rate : 0.01202
+      },
+      {
+        id : 'DKK',
+        name : '🇩🇰 Danish Krone',
+        rate : 0.05976
+      },
+      {
+        id : 'EUR',
+        name : '🇪🇺 Euro',
+        rate : 0.00804
+      },
+      {
+        id : 'FRF',
+        name : '🇫🇷 French Frank',
+        rate : 0.05272
+      },
+      {
+        id : 'GIP',
+        name : '🇬🇮 Gibraltar Pound',
+        rate : 0.00699
+      },
+      {
+        id : 'HUF',
+        name : '🇭🇺 Hungarian Forint',
+        rate : 2.90919
+      },
+      {
+        id : 'ITL',
+        name : '🇮🇹 Italian Lira',
+        rate : 15.5618
+      },
+      {
+        id : 'JPY',
+        name : '🇯🇵 Japanese Yen',
+        rate : 1.06
+      },
+      {
+        id : 'KZT',
+        name : '🇰🇿 Kazakhstan Tenge',
+        rate : 4.13327
+      },
+      {
+        id : 'LAK',
+        name : '🇱🇦 Lao Kip',
+        rate : 90.3273
+      },
+      {
+        id : 'MDL',
+        name : '🇲🇩 Moldovan Leu',
+        rate : 0.17166
+      },
+      {
+        id : 'NOK',
+        name : '🇳🇴 Norwegian Kroner',
+        rate : 0.08094
+      },
+      {
+        id : 'OMR',
+        name : '🇴🇲 Omani Rial',
+        rate : 0.00373
+      },
+      {
+        id : 'PL',
+        name : '🇵🇱 Polish Zloty',
+        rate : 0.03678
+      },
+      {
+        id: 'RUB',
+        name : '🇷🇺 Russian Rouble',
+        rate : 0.72561
+      },
+      {
+        id : 'SKK',
+        name : '🇸🇰 Slovak Koruna',
+        rate : 0.24212
+      },
+      {
+        id: 'ESP',
+        name : '🇪🇸 Spanish Peseta', 
+        rate : 0.72561
+      },
+      {
+        id: 'US',
+        name : '🇺🇸 US Dollar', 
+        rate : 0.00972
       },
     ]
   },
