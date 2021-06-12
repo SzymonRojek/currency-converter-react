@@ -1,4 +1,4 @@
-import "./style.css";
+import './style.css';
 
 const Select = ({ currencies, value, onChange }) => (
   <div className="form__selectVisual">

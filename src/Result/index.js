@@ -1,4 +1,4 @@
-import "./style.css";
+import './style.css';
 
 const Result = ({ result, currencyFrom, currencyTo }) => {
   let step = 'choose yours currencies';

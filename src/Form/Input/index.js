@@ -1,4 +1,4 @@
-import "./style.css";
+import './style.css';
 
 const Input = ({ amount, getIdCurrencyFrom, setAmount }) => (
   <label className="form__label">

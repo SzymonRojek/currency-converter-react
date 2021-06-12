@@ -1,8 +1,8 @@
-import "./style.css";
-import { useState } from "react";
-import Result from "../Result";
-import Input from "./Input";
-import Select from "./Select";
+import './style.css';
+import { useState } from 'react';
+import Result from '../Result';
+import Input from './Input';
+import Select from './Select';
 
 const Form = ({ currencies }) => {
   const [amount, setAmount] = useState("");
