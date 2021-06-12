@@ -11,7 +11,7 @@ function App() {
         <Form />
         <Footer text="© 2021 | Coded by Szymon Rojek" />
       </Container>
-    </>
+    </> 
   );
 }
 

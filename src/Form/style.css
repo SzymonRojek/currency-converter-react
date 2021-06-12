@@ -54,7 +54,6 @@
   margin-top: 40px;
 }
 
-
 /*  common styles for select and input number */
 .form__selectVisual-select,
 .form__amountVisual-input {
@@ -72,7 +71,6 @@
   outline: none;
 }
 
-
 .form__selectVisual-select {
   display: inline-block;
   min-height: 35px;
@@ -80,7 +78,6 @@
   color: rgba(255, 255, 255, 0.79);
   cursor: pointer;
 }
-
 
 .form__selectVisual {
   position: relative;
@@ -116,9 +113,6 @@
   border-top: var(--size) solid rgba(255, 255, 255, 0.79);
 }
 
-
-
-
 .form__selectVisual-select:focus+.focus {
   position: absolute;
   top: -1px;
@@ -129,43 +123,6 @@
   border-radius: 4px;
   pointer-events: none;
   z-index: 1;
-}
-
-.form__amountVisual {
-  position: relative;
-}
-
-.form__amountVisual-input {
-  min-height: 35px;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.79);
-}
-
-.form__amountVisual-input:focus+.focus {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  border: 1.5px solid #186889;
-  border-radius: 4px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.form__information {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  margin-top: 35px;
-  background-color: #9ac0d8d7;
-}
-
-.form__text {
-  padding-left: 10px;
-  font-size: 20px;
-  color: #3b3c47;
 }
 
 .form__footer {
@@ -200,4 +157,9 @@
 .form__button:active {
   background-color: #3b3c47;
   transform: translateY(3px);
+}
+
+.form__button:disabled {
+  background-color: #aeb0ba;
+  cursor: not-allowed;
 }
