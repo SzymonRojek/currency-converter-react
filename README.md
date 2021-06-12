@@ -1,31 +1,30 @@
 # Currency Converter
 
-## 🎥  Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
-
-
-
-
+## Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
-## Technologies used:
+## Used technologies:
 
 <table>
   <tr>
-    <td><img src="./src/images/npm-icon.png" width="50" height="50"></td>
-    <td><img src="./src/images/jsx-icon.png" width="50" height="50"></td>
-    <td><img src="./src/images/react.jpeg" width="80" height="50"></td>
+    <td><img src="./images/npm-icon.png" width="50" height="50"></td>
+    <td><img src="./images/jsx-icon.png" width="50" height="50"></td>
+    <td><img src="./images/create-react-app.png" width="90" height="60"></td>
   </tr>
 </table>
 <table>
   <tr>
-    <td><img src="./src/images/flexbox-icon.png" width="50" height="50"></td>
-    <td><img src="./src/images/css-icon.svg" width="50" height="50"> </td>
+    <td><img src="./images/flexbox-icon.png" width="50" height="50"></td>
+    <td><img src="./images/css-icon.svg" width="50" height="50"> </td>
   </tr>
  </table>
 
-
+## Used concepts:
+- BEM naming
+- ES6+ features
+- Hooks: useState & useRef
+- Functional Components
 
 ## Available Scripts
 
