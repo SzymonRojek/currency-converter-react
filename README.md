@@ -2,7 +2,6 @@
 
 ## Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Used technologies:
 
@@ -25,6 +24,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - ES6+ features
 - Hooks: useState & useRef
 - Functional Components
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
