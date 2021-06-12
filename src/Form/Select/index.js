@@ -10,7 +10,7 @@ const Select = ({ currencies, value, onChange }) => (
       {currencies.map(currency => 
         (
           <option key={currency.id}>
-            {currency.fullName}
+            {currency.name}
           </option>
         ))
       }

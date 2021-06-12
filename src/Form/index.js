@@ -11,17 +11,17 @@ const Form = ({ currencies }) => {
 
   const [currencyTo, setCurrencyTo] = useState("🇬🇧 British Pound");
 
-  const currenciesToExchange = currencies.find( ({ fullName }) => fullName === currencyFrom);
+  const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
 
   const [result, setResult] = useState();
 
-  const getIdCurrencyFrom = currencies.find( ({fullName}) => fullName === currencyFrom).id;
+  const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
 
   const onFormSubmit = event => {
     event.preventDefault();
   
-    const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
-    const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).id;
+    const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).rate;
+    const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).id;
 
     const calculateResult = (amount, rate) => +amount * rate;
     let result = calculateResult(amount, getRateCurrencyTo);
