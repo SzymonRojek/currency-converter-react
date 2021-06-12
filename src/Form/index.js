@@ -6,13 +6,20 @@ import Input from "./Input"
 
 const Form = () => {
   const [amount, setAmount] = useState("");
+
   const [currencyFrom, setCurrencyFrom] = useState("🇵🇱 Polish Zloty");
+
   const [currencyTo, setCurrencyTo] = useState("🇬🇧 British Pound");
+
   const currenciesToExchange = currencies.find( ({ fullName }) => fullName === currencyFrom);
+
   const [result, setResult] = useState();
+
   const getIdCurrencyFrom = currencies.find( ({fullName}) => fullName === currencyFrom).id;
+
   const calculateResult = (amount, rate) => +amount * rate;
 
+  
   const onFormSubmit = event => {
     event.preventDefault();
 
