@@ -20,10 +20,12 @@
  </table>
 
 ## Used concepts:
-- BEM naming
-- ES6+ features
-- Hooks: useState & useRef
-- Functional Components
+:white_check_mark:  BEM naming 
+<br>
+:white_check_mark: ES6+ features 
+<br>
+:white_check_mark: Hooks: useState & useRef <br>
+:white_check_mark: Functional Components
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
