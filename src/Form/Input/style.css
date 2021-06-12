@@ -17,6 +17,11 @@
   outline: none;
 }
 
+.form__amountVisual-input::-webkit-inner-spin-button,
+.form__amountVisual-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 .form__amountVisual-input {
   min-height: 35px;
   width: 100%;
