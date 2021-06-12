@@ -1,12 +1,13 @@
 import "./style.css";
 import { useState } from "react";
-import currencies from '../currencies';
-import Result from '../Result';
+import currencies from "../currencies";
+import Result from './Result';
+import Input from "./Input"
 
 const Form = () => {
   const [amount, setAmount] = useState("");
-  const [currencyFrom, setCurrencyFrom] = useState("search");
-  const [currencyTo, setCurrencyTo] = useState("search");
+  const [currencyFrom, setCurrencyFrom] = useState("🇵🇱 Polish Zloty");
+  const [currencyTo, setCurrencyTo] = useState("🇬🇧 British Pound");
   const currenciesToExchange = currencies.find( ({ fullName }) => fullName === currencyFrom);
   const [result, setResult] = useState();
   const getIdCurrencyFrom = currencies.find( ({fullName}) => fullName === currencyFrom).id;
@@ -14,18 +15,13 @@ const Form = () => {
 
   const onFormSubmit = event => {
     event.preventDefault();
-    let getRateCurrencyTo = null;
 
-    if (currencyFrom !== "search" && currencyTo !== "search") {
-      getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
-    }
-
+    const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).rate;
     const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({fullName}) => fullName === currencyTo).id;
-  
 
-    const result = calculateResult(amount, getRateCurrencyTo);
+    let result = calculateResult(amount, getRateCurrencyTo);
     setResult({ value: result, id: getIdCurrencyTo });
-
+    setAmount("");
   };
  
   return (
@@ -83,33 +79,24 @@ const Form = () => {
               </label>
             </li>
             <li>
-              <label className="form__label">
-                <span className="form__labelText form__labelText--last">
-                   Amount{getIdCurrencyFrom !== "search" ? ` in ${getIdCurrencyFrom}` : ""}*:
-                </span>
-                <div className="form__amountVisual">
-                  <input
-                    value={amount}
-                    onChange={({ target }) => setAmount(target.value)}
-                    className="form__amountVisual-input" 
-                    type="number" 
-                    name="amount" 
-                    min="1" 
-                    step="any" 
-                    placeholder="type here" 
-                    required
-                  />
-                  <span className="focus"></span>
-                </div>
-              </label>
+              <Input 
+                amount={amount} 
+                setAmount={setAmount} 
+                getIdCurrencyFrom={getIdCurrencyFrom}
+              />
             </li>
             <li className="form__information">
-              <Result result={result} />
+              <Result 
+                result={result}
+                currencyFrom={currencyFrom}
+                currencyTo={currencyTo}
+                amount={amount}
+                setAmount={setAmount}
+              />
             </li>
-     
           </ul>
           <div className="form__footer">
-            <button className="form__button">Count Amount</button>
+            <button className="form__button" disabled={currencyFrom === currencyTo}>Count Amount</button>
           </div>
       </fieldset>
     </form>
