@@ -1,6 +1,6 @@
 import "./style.css";
 import { useState } from "react";
-import Result from "./Result";
+import Result from "../Result";
 import Input from "./Input";
 import Select from "./Select";
 

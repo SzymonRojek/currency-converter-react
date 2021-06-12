@@ -2,7 +2,7 @@ import Container from "./Container";
 import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
-import currencies from "./currencies";
+import currencies from "./currencies/currencies";
 
 function App() {
   return (
