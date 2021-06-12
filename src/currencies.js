@@ -1,9 +1,5 @@
 const currencies = [  
   {
-    id: 'search',
-    fullName: 'search'
-  },
-  {
     id : 'PL',
     fullName : '🇵🇱 Polish Zloty', 
     exchangeTo : [
