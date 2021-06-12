@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Result = ({ result, currencyFrom, currencyTo}) => {
+const Result = ({ result, currencyFrom, currencyTo }) => {
   let step = 'choose yours currencies';
 
   if(currencyFrom === currencyTo) {
