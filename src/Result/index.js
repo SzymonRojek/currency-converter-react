@@ -10,7 +10,7 @@ const Result = ({ result, currencyFrom, currencyTo }) => {
   return (
     <div>
       <p className="form__text">{!result || currencyFrom === currencyTo ? step : result.id}</p>
-      <p className="form__text">{result ? result.value.toFixed(2) : ""} </p>
+      <p className="form__text">cash back: {result ? result.value.toFixed(2) : ""} </p>
     </div>
   );
 };
