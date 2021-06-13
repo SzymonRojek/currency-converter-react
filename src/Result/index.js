@@ -3,7 +3,7 @@ import './style.css';
 export const Result = ({ result, currencyFrom, currencyTo }) => {
   let stepInformation = 'choose all currencies';
 
-  if(currencyFrom === currencyTo && currencyFrom !== 'search' && currencyTo !== "search") {
+  if(currencyFrom === currencyTo && currencyFrom !== '🔍 search' && currencyTo !== "🔍 search") {
     stepInformation = "choosen same currencies";
   } 
 
@@ -11,7 +11,7 @@ export const Result = ({ result, currencyFrom, currencyTo }) => {
     stepInformation = "type an amount";
   }
 
-  if(currencyFrom === "🔍 search" && currencyTo !== "🔍 serch") {
+  if(currencyFrom === "🔍 search" && currencyTo !== "🔍 search") {
     stepInformation = "choose all currencies";
   }
 
