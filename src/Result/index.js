@@ -15,9 +15,11 @@ export const Result = ({ result, currencyFrom, currencyTo }) => {
     stepInformation = "choose all currencies";
   }
 
+  const getFlagEmoji = countryCode => countryCode.toUpperCase().replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt()));
+
   return (
     <div>
-      <p className="form__text">{!result || currencyFrom === currencyTo ? stepInformation : result.id}</p>
+      <p className="form__text">{result ? getFlagEmoji(result.id) : ""} {!result || currencyFrom === currencyTo ? stepInformation : result.id}</p>
       <p className="form__text">cash back: {result ? result.value.toFixed(2) : ""} </p>
     </div>
   );
