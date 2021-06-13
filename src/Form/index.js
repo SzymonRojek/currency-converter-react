@@ -74,7 +74,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
             </li>
           </ul>
           <Button 
-            disabled={currencyFrom === currencyTo}
+            disabled={currencyFrom === currencyTo || currencyFrom === "🔍 search" || currencyTo === "🔍 search"}
             title="count amount"
           />
       </fieldset>
