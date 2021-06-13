@@ -1,8 +1,8 @@
 import './style.css';
 
-const Footer = ({ text }) => (
+const Footer = ({ title }) => (
   <footer className="footer">
-    <p className="footer__paragraph">{text}</p>
+    <p className="footer__paragraph">{title}</p>
   </footer>
 );
 
