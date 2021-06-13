@@ -19,8 +19,13 @@ export const Result = ({ result, currencyFrom, currencyTo }) => {
 
   return (
     <div>
-      <p className="form__text">{result ? getFlagEmoji(result.id) : ""} {!result || currencyFrom === currencyTo ? stepInformation : result.id}</p>
-      <p className="form__text">cash back: {result ? result.value.toFixed(2) : ""} </p>
+      <p
+        className="form__text">
+        {currencyFrom !== currencyTo ? (result ? getFlagEmoji(result.id) : "") : ""} {!result || currencyFrom === currencyTo ? stepInformation : result.id}
+      </p>
+      <p 
+        className="form__text">cash back: {result ? result.value.toFixed(2) : ""} 
+      </p>
     </div>
   );
 };
