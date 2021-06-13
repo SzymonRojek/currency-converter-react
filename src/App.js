@@ -10,7 +10,7 @@ function App() {
       <Container>
         <Header title="Currency Converter" />
         <Form currencies={currencies} />
-        <Footer text="© 2021 | Coded by Szymon Rojek" />
+        <Footer title="© 2021 | Coded by Szymon Rojek" />
       </Container>
     </> 
   );
