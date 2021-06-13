@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Result from '../Result';
 import Input from './Input';
 import Select from './Select';
+import Button from './Button';
 
 const Form = ({ currencies }) => {
   const [amount, setAmount] = useState("");
@@ -79,12 +80,14 @@ const Form = ({ currencies }) => {
               />
             </li>
           </ul>
-          <div className="form__footer">
-            <button className="form__button" disabled={currencyFrom === currencyTo}>Count Amount</button>
-          </div>
+          <Button 
+            currencyFrom={currencyFrom}
+            currencyTo={currencyTo}
+            title="count amount"
+          />
       </fieldset>
     </form>
   ); 
 };
 
-export default Form;
+export default Form
