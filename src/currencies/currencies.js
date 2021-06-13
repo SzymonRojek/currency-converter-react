@@ -1,5 +1,9 @@
 const currencies = [
   {
+    id : 'search',
+    name : '🔍 search'
+  },
+  {
     id: 'ALL',
     name : '🇦🇱 Albanian Lek', 
     exchangeTo : [
