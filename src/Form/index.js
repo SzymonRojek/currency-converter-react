@@ -1,11 +1,11 @@
 import './style.css';
 import { useState } from 'react';
-import Result from '../Result';
-import Input from './Input';
-import Select from './Select';
-import Button from './Button';
+import { Result } from '../Result';
+import { Input } from './Input';
+import { Select } from './Select';
+import { Button } from './Button';
 
-const Form = ({ currencies, result, calculateResult }) => {
+export const Form = ({ currencies, result, calculateResult }) => {
   const [currencyFrom, setCurrencyFrom] = useState("🔍 search");
   const [currencyTo, setCurrencyTo] = useState("🔍 search");
   const [amount, setAmount] = useState("");
@@ -81,5 +81,3 @@ const Form = ({ currencies, result, calculateResult }) => {
     </form>
   ); 
 };
-
-export default Form

@@ -1,6 +1,6 @@
 import './style.css';
 
-const Result = ({ result, currencyFrom, currencyTo }) => {
+export const Result = ({ result, currencyFrom, currencyTo }) => {
   let stepInformation = 'choose all currencies';
 
   if(currencyFrom === currencyTo && currencyFrom !== 'search' && currencyTo !== "search") {
@@ -15,8 +15,6 @@ const Result = ({ result, currencyFrom, currencyTo }) => {
     stepInformation = "choose all currencies";
   }
 
-
- 
   return (
     <div>
       <p className="form__text">{!result || currencyFrom === currencyTo ? stepInformation : result.id}</p>
@@ -24,5 +22,3 @@ const Result = ({ result, currencyFrom, currencyTo }) => {
     </div>
   );
 };
-
-export default Result;

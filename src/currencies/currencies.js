@@ -1,4 +1,4 @@
-const currencies = [
+export const currencies = [
   {
     id : 'search',
     name : '🔍 search'
@@ -2229,6 +2229,4 @@ const currencies = [
       },
     ]
   },
-]; 
-
-export default currencies;
+];

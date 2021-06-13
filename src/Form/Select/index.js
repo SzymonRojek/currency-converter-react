@@ -1,6 +1,6 @@
 import './style.css';
 
-const Select = ({ currencies, value, onChange }) => (
+export const Select = ({ currencies, value, onChange }) => (
   <div className="form__selectVisual">
     <select 
       value={value}
@@ -19,7 +19,3 @@ const Select = ({ currencies, value, onChange }) => (
     <span className="form__selectVisual form__selectVisual--arrow"></span>
   </div>
 );
-
-
-export default Select;
-       

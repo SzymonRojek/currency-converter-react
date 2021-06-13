@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Container from "./Container";
-import Header from "./Header";
-import Footer from "./Footer";
-import Form from "./Form";
-import currencies from "./currencies/currencies";
+import { Container } from "./Container";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { Form } from "./Form";
+import { currencies } from "./currencies/currencies";
 
-function App() {
+export function App() {
   const [result, setResult] = useState();
 
   const calculateResult = (amount, getRateCurrencyTo, getIdCurrencyTo) => {
@@ -22,5 +22,3 @@ function App() {
     </> 
   );
 };
-
-export default App;

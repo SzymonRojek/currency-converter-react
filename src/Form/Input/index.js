@@ -1,6 +1,6 @@
 import './style.css';
 
-const Input = ({ currencies, amount, setAmount, currencyFrom }) => {
+export const Input = ({ currencies, amount, setAmount, currencyFrom }) => {
 
   const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
 
@@ -26,5 +26,3 @@ const Input = ({ currencies, amount, setAmount, currencyFrom }) => {
     </label>
   );
 };
-
-export default Input;
