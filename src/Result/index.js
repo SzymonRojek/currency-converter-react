@@ -15,6 +15,8 @@ const Result = ({ result, currencyFrom, currencyTo }) => {
     stepInformation = "choose all currencies";
   }
 
+
+ 
   return (
     <div>
       <p className="form__text">{!result || currencyFrom === currencyTo ? stepInformation : result.id}</p>

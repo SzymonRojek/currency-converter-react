@@ -5,12 +5,11 @@ import Input from './Input';
 import Select from './Select';
 import Button from './Button';
 
-const Form = ({ currencies }) => {
+const Form = ({ currencies, result, calculateResult }) => {
   const [currencyFrom, setCurrencyFrom] = useState("🔍 search");
   const [currencyTo, setCurrencyTo] = useState("🔍 search");
   const [amount, setAmount] = useState("");
-  const [result, setResult] = useState();
-
+  
   const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
 
   const onFormSubmit = event => {
@@ -19,9 +18,7 @@ const Form = ({ currencies }) => {
     const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).rate;
     const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).id;
 
-    const calculateResult = (amount, rate) => +amount * rate;
-    let result = calculateResult(amount, getRateCurrencyTo);
-    setResult({ value: result, id: getIdCurrencyTo });
+    calculateResult(amount, getRateCurrencyTo, getIdCurrencyTo);
     setAmount("");
   };
  
