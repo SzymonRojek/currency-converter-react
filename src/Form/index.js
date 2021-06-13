@@ -6,17 +6,12 @@ import Select from './Select';
 import Button from './Button';
 
 const Form = ({ currencies }) => {
+  const [currencyFrom, setCurrencyFrom] = useState("🔍 search");
+  const [currencyTo, setCurrencyTo] = useState("🔍 search");
   const [amount, setAmount] = useState("");
-
-  const [currencyFrom, setCurrencyFrom] = useState("🇵🇱 Polish Zloty");
-
-  const [currencyTo, setCurrencyTo] = useState("🇬🇧 British Pound");
-
-  const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
-
   const [result, setResult] = useState();
 
-  const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
+  const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
 
   const onFormSubmit = event => {
     event.preventDefault();
@@ -69,7 +64,8 @@ const Form = ({ currencies }) => {
               <Input 
                 amount={amount} 
                 setAmount={setAmount} 
-                getIdCurrencyFrom={getIdCurrencyFrom}
+                currencyFrom={currencyFrom}
+                currencies={currencies}
               />
             </li>
             <li className="form__information">
@@ -81,8 +77,7 @@ const Form = ({ currencies }) => {
             </li>
           </ul>
           <Button 
-            currencyFrom={currencyFrom}
-            currencyTo={currencyTo}
+            disabled={currencyFrom === currencyTo}
             title="count amount"
           />
       </fieldset>
