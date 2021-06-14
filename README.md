@@ -24,7 +24,7 @@
 <br>
 :white_check_mark: ES6+ features 
 <br>
-:white_check_mark: Hooks: useState & useRef <br>
+:white_check_mark: Hooks: useState, useEffect, useRef  <br>
 :white_check_mark: Functional Components
 <br>
 :white_check_mark: object Date()
