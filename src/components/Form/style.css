@@ -28,6 +28,9 @@
   letter-spacing: 3px;
   word-spacing: 2px;
   color: #186889;
+  background-color: #9ac0d8d7;
+  max-width: 150px;
+  padding: 5px;
 }
 
 .form__list {
