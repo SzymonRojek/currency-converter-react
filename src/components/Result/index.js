@@ -2,7 +2,10 @@ import './style.css';
 
 export const Result = ({ result, getIdCurrencyFrom }) => {
 
-  const getFlagEmoji = countryCode => countryCode.toUpperCase().replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt()));
+  const getFlagEmoji = countryCode => 
+    countryCode
+    .toUpperCase()
+    .replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt()));
 
   return (
     <div>
