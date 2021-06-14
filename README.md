@@ -26,6 +26,11 @@
 <br>
 :white_check_mark: Hooks: useState & useRef <br>
 :white_check_mark: Functional Components
+<br>
+:white_check_mark: object Date()
+<br>
+:white_check_mark: setInterval()
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
