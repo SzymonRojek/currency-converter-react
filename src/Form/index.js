@@ -1,27 +1,34 @@
 import './style.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Result } from '../Result';
 import { Input } from './Input';
 import { Select } from './Select';
-import { Button } from './Button';
+import { Button } from './Button'; 
 
 export const Form = ({ currencies, result, calculateResult }) => {
   const [currencyFrom, setCurrencyFrom] = useState("🔍 search");
   const [currencyTo, setCurrencyTo] = useState("🔍 search");
-  const [amount, setAmount] = useState("");
-  
+  const [amount, setAmount] = useState();
+
   const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
+  const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
+
+  const inputTypedAmount = useRef();
+
+  const clearInput = () => {
+   inputTypedAmount.current.value = "";
+  };
 
   const onFormSubmit = event => {
     event.preventDefault();
   
     const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).rate;
     const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).id;
-
+    
     calculateResult(amount, getRateCurrencyTo, getIdCurrencyTo);
-    setAmount("");
+    clearInput();
   };
- 
+
   return (
     <form 
       onSubmit={onFormSubmit}
@@ -59,17 +66,16 @@ export const Form = ({ currencies, result, calculateResult }) => {
             </li>
             <li>
               <Input 
-                amount={amount} 
-                setAmount={setAmount} 
-                currencyFrom={currencyFrom}
-                currencies={currencies}
+                inputTypedAmount={inputTypedAmount}
+                setAmount={setAmount}
+                getIdCurrencyFrom={getIdCurrencyFrom}
               />
             </li>
             <li className="form__information">
               <Result 
+                amount={amount}
                 result={result}
-                currencyFrom={currencyFrom}
-                currencyTo={currencyTo}
+                getIdCurrencyFrom={getIdCurrencyFrom}
               />
             </li>
           </ul>
