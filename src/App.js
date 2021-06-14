@@ -7,16 +7,25 @@ import { currencies } from "./currencies/currencies";
 
 export function App() {
   const [result, setResult] = useState();
+  
+  const calculateResult = ( amount, getRateCurrencyTo, getIdCurrencyTo ) => {
 
-  const calculateResult = (amount, getRateCurrencyTo, getIdCurrencyTo) => {
-    setResult({ value: +amount * getRateCurrencyTo, id: getIdCurrencyTo });
+    setResult({ 
+        value: +amount * getRateCurrencyTo, 
+        id: getIdCurrencyTo, 
+        amount
+      });
   };
 
   return (
     <>
       <Container>
         <Header title="Currency Converter" />
-        <Form currencies={currencies} calculateResult={calculateResult} result={result} />
+        <Form 
+          currencies={currencies} 
+          calculateResult={calculateResult} 
+          result={result} 
+        />
         <Footer title="© 2021 | Coded by Szymon Rojek" />
       </Container>
     </> 
