@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Container } from "./Container";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import { Form } from "./Form";
-import { currencies } from "./currencies/currencies";
+import { Container } from './components/Container';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Form } from './components/Form';
+import { currencies } from './currencies/currencies';
 
 export function App() {
   const [result, setResult] = useState();
