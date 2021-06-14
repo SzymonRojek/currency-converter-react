@@ -1,7 +1,13 @@
 # Currency Converter
+<br>
 
 ## Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
 
+<br>
+
+<img src="./images/currency-converter-giff.gif" width="200" height="260">
+
+<br>
 
 ## Used technologies:
 
@@ -19,6 +25,8 @@
   </tr>
  </table>
 
+ <br>
+
 ## Used concepts:
 :white_check_mark:  BEM naming 
 <br>
@@ -33,6 +41,8 @@
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<br>
 
 ## Available Scripts
 
