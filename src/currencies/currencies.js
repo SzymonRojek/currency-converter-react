@@ -8,6 +8,11 @@ export const currencies = [
     name : '🇦🇱 Albanian Lek', 
     exchangeTo : [
       {
+        id: 'AL',
+        name : '🇦🇱 Albanian Lek', 
+        rate : 1
+      },
+      {
         id : 'GB',
         name : '🇬🇧 British Pound',
         rate : 0.00699
@@ -117,6 +122,11 @@ export const currencies = [
         id : 'AL',
         name : '🇦🇱 Albanian Lek', 
         rate : 140.222 
+      },
+      {
+        id : 'GB',
+        name : '🇬🇧 British Pound',  
+        rate : 1
       },
       {
         id : 'CZ',
@@ -230,6 +240,11 @@ export const currencies = [
         rate : 0.03353
       },
       {
+        id : 'CZ',
+        name : '🇨🇿 Czech Koruna', 
+        rate : 1
+      },
+      {
         id : 'CA',
         name : '🇨🇦 Canadian Dollar',
         rate : 0.05767
@@ -339,6 +354,11 @@ export const currencies = [
         id : 'CZ',
         name : '🇨🇿 Czech Koruna', 
         rate : 17.3268
+      },
+      {
+        id : 'CA',
+        name : '🇨🇦 Canadian Dollar',
+        rate : 1
       },
       {
         id : 'DK',
@@ -452,6 +472,11 @@ export const currencies = [
         rate : 0.20115
       },
       {
+        id : 'DK',
+        name : '🇩🇰 Danish Krone',
+        rate : 1
+      },
+      {
         id : 'EU',
         name : '🇪🇺 Euro',
         rate : 0.13447
@@ -561,6 +586,11 @@ export const currencies = [
         id : 'DK',
         name : '🇩🇰 Danish Krone',
         rate : 7.43527
+      },
+      {
+        id : 'EU',
+        name : '🇪🇺 Euro',
+        rate : 1
       },
       {
         id : 'FR',
@@ -674,6 +704,11 @@ export const currencies = [
         rate : 0.15245
       },
       {
+        id : 'FR',
+        name : '🇫🇷 French Frank',
+        rate : 1
+      },
+      {
         id : 'GI',
         name : '🇬🇮 Gibraltar Pound',
         rate : 0.13257
@@ -783,6 +818,11 @@ export const currencies = [
         id : 'FR',
         name : '🇫🇷 French Frank',
         rate : 7.54177
+      },
+      {
+        id : 'GI',
+        name : '🇬🇮 Gibraltar Pound',
+        rate : 1
       },
       {
         id : 'HU',
@@ -896,6 +936,11 @@ export const currencies = [
         rate : 0.00240
       },
       {
+        id: 'HU',
+        name : '🇭🇺 Hungarian Forint', 
+        rate : 1
+      },
+      {
         id : 'IT',
         name : '🇮🇹 Italian Lira',
         rate : 5.34412
@@ -1005,6 +1050,11 @@ export const currencies = [
         id : 'HU',
         name : '🇭🇺 Hungarian Forint', 
         rate : 0.18695
+      },
+      {
+        id : 'IT',
+        name : '🇮🇹 Italian Lira', 
+        rate : 1
       },
       {
         id : 'JP',
@@ -1118,6 +1168,11 @@ export const currencies = [
         rate : 14.7159
       },
       {
+        id : 'JP',
+        name : '🇯🇵 Japanese Yen',
+        rate : 1
+      },
+      {
         id : 'KZ',
         name : '🇰🇿 Kazakhstan Tenge',
         rate : 3.89430
@@ -1227,6 +1282,11 @@ export const currencies = [
         id : 'JP',
         name : '🇯🇵 Japanese Yen',
         rate : 0.25
+      },
+      {
+        id : 'KZ',
+        name : '🇰🇿 Kazakhstan Tenge',
+        rate : 1
       },
       {
         id : 'LA',
@@ -1340,6 +1400,11 @@ export const currencies = [
         rate : 0.04457
       },
       {
+        id : 'LA',
+        name : '🇱🇦 Lao Kip',
+        rate : 1
+      },
+      {
         id : 'MD',
         name : '🇲🇩 Moldovan Leu',
         rate : 0.00185
@@ -1449,6 +1514,11 @@ export const currencies = [
         id : 'LA',
         name : '🇱🇦 Lao Kip',
         rate : 517.828
+      },
+      {
+        id : 'MD',
+        name : '🇲🇩 Moldovan Leu',
+        rate : 1
       },
       {
         id : 'NO',
@@ -1562,6 +1632,11 @@ export const currencies = [
         rate : 2.11987
       },
       {
+        id : 'NO',
+        name : '🇳🇴 Norwegian Kroner',
+        rate : 1
+      },
+      {
         id : 'OM',
         name : '🇴🇲 Omani Rial',
         rate : 0.04607
@@ -1671,6 +1746,11 @@ export const currencies = [
         id : 'NO',
         name : '🇳🇴 Norwegian Kroner',
         rate : 21.5756
+      },
+      {
+        id : 'OM',
+        name : '🇴🇲 Omani Rial',
+        rate : 1
       },
       {
         id : 'PL',
@@ -1784,6 +1864,11 @@ export const currencies = [
         rate : 0.10092
       },
       {
+        id : 'PL',
+        name : '🇵🇱 Polish Zloty', 
+        rate : 1
+      },
+      {
         id : 'RU',
         name : '🇷🇺 Russian Rouble', 
         rate : 19.7077 
@@ -1893,6 +1978,11 @@ export const currencies = [
         id : 'PL',
         name : '🇵🇱 Polish Zloty',
         rate : 0.05066
+      },
+      {
+        id : 'RU',
+        name : '🇷🇺 Russian Rouble',
+        rate : 1
       },
       {
         id : 'SK',
@@ -2006,6 +2096,11 @@ export const currencies = [
         rate : 2.99650
       },
       {
+        id : 'SK',
+        name : '🇸🇰 Slovak Koruna', 
+        rate : 1
+      },
+      {
         id : 'ES',
         name : '🇪🇸 Spanish Peseta', 
         rate : 5.52300
@@ -2115,6 +2210,11 @@ export const currencies = [
         id : 'SK',
         name : '🇸🇰 Slovak Koruna', 
         rate : 0.18106
+      },
+      {
+        id : 'ES',
+        name : '🇪🇸 Spanish Peseta',
+        rate : 1
       },
       {
         id : 'US',
@@ -2227,6 +2327,11 @@ export const currencies = [
         name : '🇪🇸 Spanish Peseta', 
         rate : 137.632
       },
+      {
+        id : 'US',
+        name : '🇺🇸 US Dollar',
+        rate : 1
+      }
     ]
-  },
+  }
 ];
