@@ -4,7 +4,7 @@ import { Result } from '../Result';
 import { Input } from './Input';
 import { Select } from './Select';
 import { Button } from './Button'; 
-import { DateUpdate } from './Date';
+import { Clock } from './Clock';
 
 export const Form = ({ currencies, result, calculateResult }) => {
   const [currencyFrom, setCurrencyFrom] = useState("🔍 search");
@@ -36,7 +36,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
       className="form">
       <fieldset className="form__fieldset">
         <p className="form__paragraph">*fields required</p>
-        <DateUpdate />
+        <Clock />
           <ul className="form__list">
             <li>
               <label>
