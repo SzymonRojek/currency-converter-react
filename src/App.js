@@ -12,10 +12,10 @@ export function App() {
   const calculateResult = ( amount, getRateCurrencyTo, getIdCurrencyTo ) => {
 
     setResult({ 
-        value: +amount * getRateCurrencyTo, 
-        id: getIdCurrencyTo, 
-        amount
-      });
+      value: +amount * getRateCurrencyTo, 
+      id: getIdCurrencyTo, 
+      amount
+    });
   };
 
   return (
