@@ -10,10 +10,10 @@ export const Result = ({ result, getIdCurrencyFrom }) => {
   return (
     <div>
       <p className="form__text"> 
-        cash in: {result ? result.amount : ''} {result ? getFlagEmoji(getIdCurrencyFrom) : ""}
+        cash in: {result.amount} {getFlagEmoji(getIdCurrencyFrom)}
       </p>
       <p className="form__text"> 
-        cash out: {result ? result.value.toFixed(2) : "" } {result ? getFlagEmoji(result.id) : ""}
+        cash out: {result.value.toFixed(2) } {getFlagEmoji(result.id)}
       </p>
     </div>
   );
