@@ -7,8 +7,8 @@ import { Button } from './Button';
 import { Clock } from './Clock';
 
 export const Form = ({ currencies, result, calculateResult }) => {
-  const [currencyFrom, setCurrencyFrom] = useState("🔍 search");
-  const [currencyTo, setCurrencyTo] = useState("🔍 search");
+  const [currencyFrom, setCurrencyFrom] = useState("🇬🇧 British Pound");
+  const [currencyTo, setCurrencyTo] = useState("🇵🇱 Polish Zloty");
   const [amount, setAmount] = useState();
 
   const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
