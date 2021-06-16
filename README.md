@@ -20,7 +20,7 @@
 </table>
 <table>
   <tr>
-    <td><img src="./images/flexbox-icon.png" width="50" height="50"></td>
+    <td><img src="./images/flexbox-icon.jpeg" width="50" height="50"></td>
     <td><img src="./images/css-icon.svg" width="50" height="50"> </td>
   </tr>
  </table>
