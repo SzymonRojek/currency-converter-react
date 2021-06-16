@@ -1,7 +1,7 @@
 import './style.css';
 
 export const Result = ({ result, getIdCurrencyFrom }) => {
-
+  
   const getFlagEmoji = countryCode => 
     countryCode
     .toUpperCase()
