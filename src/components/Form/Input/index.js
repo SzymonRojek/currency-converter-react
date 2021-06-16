@@ -1,11 +1,11 @@
 import './style.css';
 
 export const Input = ({ amount, setAmount, inputTypedAmount, getIdCurrencyFrom }) => {
- 
+
   return (
     <label className="form__label">
       <span className="form__labelText form__labelText--last">
-        Amount {getIdCurrencyFrom !== "search" ? `in ${getIdCurrencyFrom}` : ""}*:
+        Amount in {getIdCurrencyFrom}*:
       </span>
       <div className="form__amountVisual">
         <input
