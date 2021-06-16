@@ -1,9 +1,7 @@
 # Currency Converter
-<br>
+
 
 ## Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
-
-<br>
 
 <img src="./images/currency-converter-giff.gif" width="200" height="260">
 
@@ -13,19 +11,18 @@
 
 <table>
   <tr>
-    <td><img src="./images/npm-icon.png" width="50" height="50"></td>
-    <td><img src="./images/jsx-icon.png" width="50" height="50"></td>
-    <td><img src="./images/create-react-app.png" width="90" height="60"></td>
+    <td><img src="./images/npm-icon.png" width="70" height="70"></td>
+    <td><img src="./images/jsx-icon.png" width="70" height="70"></td>
+    <td><img src="./images/create-react-app.png" width="100" height="60"></td>
   </tr>
 </table>
 <table>
   <tr>
-    <td><img src="./images/flexbox-icon.jpeg" width="50" height="50"></td>
-    <td><img src="./images/css-icon.svg" width="50" height="50"> </td>
+    <td><img src="./images/flexbox-icon.jpeg" width="80" height="80"></td>
+    <td><img src="./images/css-icon.svg" width="75" height="70"> </td>
   </tr>
  </table>
 
- <br>
 
 ## Used concepts:
 :white_check_mark:  BEM naming 
