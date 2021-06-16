@@ -3,7 +3,7 @@ import { Container } from './components/Container';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Form } from './components/Form';
-import { currencies } from './currencies/currencies';
+import { currencies } from './currencies';
 
 
 export function App() {

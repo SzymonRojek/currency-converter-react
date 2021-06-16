@@ -1,15 +1,15 @@
 import './style.css';
 import { useState, useRef } from 'react';
-import { Result } from '../Result';
+import { Result } from './Result';
 import { Input } from './Input';
 import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
 
 export const Form = ({ currencies, result, calculateResult }) => {
+  const [amount, setAmount] = useState();
   const [currencyFrom, setCurrencyFrom] = useState("🇬🇧 British Pound");
   const [currencyTo, setCurrencyTo] = useState("🇵🇱 Polish Zloty");
-  const [amount, setAmount] = useState();
 
   const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
   const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
@@ -68,8 +68,8 @@ export const Form = ({ currencies, result, calculateResult }) => {
             </li>
             <li>
               <Input 
-                inputTypedAmount={inputTypedAmount}
                 setAmount={setAmount}
+                inputTypedAmount={inputTypedAmount}
                 getIdCurrencyFrom={getIdCurrencyFrom}
               />
             </li>
