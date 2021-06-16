@@ -1,9 +1,5 @@
 export const currencies = [
   {
-    id : 'search',
-    name : '🔍 search'
-  },
-  {
     id: 'AL',
     name : '🇦🇱 Albanian Lek', 
     exchangeTo : [
