@@ -19,16 +19,14 @@ export function App() {
   };
 
   return (
-    <>
-      <Container>
-        <Header title="Currency Converter" />
-        <Form 
-          currencies={currencies} 
-          calculateResult={calculateResult} 
-          result={result} 
-        />
-        <Footer title="© 2021 | Coded by Szymon Rojek" />
-      </Container>
-    </> 
+    <Container>
+      <Header title="Currency Converter" />
+      <Form 
+        currencies={currencies} 
+        calculateResult={calculateResult} 
+        result={result} 
+      />
+      <Footer title="© 2021 | Coded by Szymon Rojek" />
+    </Container>
   );
 };
