@@ -5,7 +5,7 @@ export const Clock = () => {
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(0);
 
-  const structureDate = date.toLocaleDateString(undefined, {
+  const getDate = date.toLocaleDateString(undefined, {
     weekday : "long",
     day: "numeric",
     month: "long",
@@ -22,7 +22,7 @@ export const Clock = () => {
   return (
     <div className="form__footer">
       <p className="form__clock">
-        Today is {structureDate}, {time}
+        {getDate}, {time}
       </p>
     </div>
   );
