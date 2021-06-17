@@ -15,7 +15,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
   const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
 
   const inputTypedAmount = useRef();
-
+  
   const clearInput = () => {
    inputTypedAmount.current.value = "";
   };
@@ -25,7 +25,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
   
     const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).rate;
     const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).id;
-    
+  
     calculateResult(amount, getRateCurrencyTo, getIdCurrencyTo);
     clearInput();
   };
@@ -75,9 +75,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
             </li>
             <li className="form__information">
               <Result
-                amount={amount}
                 result={result}
-                getIdCurrencyFrom={getIdCurrencyFrom}
               />
             </li>
           </ul>

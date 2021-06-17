@@ -7,12 +7,12 @@ import { currencies } from './currencies';
 
 
 export function App() {
-  const [result, setResult] = useState();
-  
+  const [result, setResult] = useState({});
+
   const calculateResult = ( amount, getRateCurrencyTo, getIdCurrencyTo ) => {
 
-    setResult({ 
-      value: +amount * getRateCurrencyTo, 
+    setResult({
+      value: (+amount * getRateCurrencyTo).toFixed(2), 
       id: getIdCurrencyTo, 
       amount
     });
