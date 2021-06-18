@@ -1,9 +1,9 @@
-import './style.css';
+import { ButtonWrapper, StyledButton } from './styled';
 
 export const Button = ({ title }) => (
-  <div className="form__footer">
-    <button className="form__button"> 
+  <ButtonWrapper>
+    <StyledButton> 
       {title}
-    </button>
-  </div>
+    </StyledButton>
+  </ButtonWrapper>
 );
