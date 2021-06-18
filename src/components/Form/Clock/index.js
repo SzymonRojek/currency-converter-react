@@ -1,4 +1,4 @@
-import './style.css';
+import { ClockBox, StyledText } from './styled';
 import { useState, useEffect } from 'react';
 
 export const Clock = () => {
@@ -20,10 +20,10 @@ export const Clock = () => {
   }, [time]);
 
   return (
-    <div className="form__footer">
-      <p className="form__clock">
+    <ClockBox>
+      <StyledText>
         {getDate}, {time}
-      </p>
-    </div>
+      </StyledText>
+    </ClockBox>
   );
 };
