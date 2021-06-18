@@ -13,4 +13,12 @@ export const GlobalStyle = createGlobalStyle`
   *, ::after, ::before {
     box-sizing: inherit;
   }
+
+  body {
+    min-height: 100vh;
+    font-family: 'Antonio', sans-serif;
+    background-color: #2e86abc4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 `;
