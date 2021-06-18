@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,gBAAiB,CACjB,gCAAkC,CAClC,mDAA2B,CAC3B,kCAAmC,CACnC,iCACF","file":"main.f4232a95.chunk.css","sourcesContent":["body {\n  min-height: 100vh;\n  font-family: 'Antonio', sans-serif;\n  background-color: #2e86abc4;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}"]}
