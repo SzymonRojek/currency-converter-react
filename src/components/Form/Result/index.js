@@ -1,12 +1,12 @@
-import './style.css';
+import { InformationBox, StyledText } from './styled';
 
 export const Result = ({ result }) => (
-  <div>
-    <p className="form__text"> 
+  <InformationBox>
+    <StyledText> 
       cash in: {result ? result.amount : ""} 
-    </p>
-    <p className="form__text"> 
+    </StyledText>
+    <StyledText> 
       cash out: {result ? result.value : "" } 
-    </p>
-  </div>
+    </StyledText>
+  </InformationBox>
 );
