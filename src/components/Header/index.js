@@ -1,7 +1,9 @@
-import "./style.css";
+import { HeadingBox, StyledHeading } from './styled';
 
 export const Header = ({ title }) => (
-  <header>
-    <h1 className="header__heading">{title}</h1>
-  </header>
+  <HeadingBox>
+    <StyledHeading>
+      {title}
+    </StyledHeading>
+  </HeadingBox>
 );
