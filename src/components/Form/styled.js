@@ -1,4 +1,6 @@
-.form__fieldset {
+import styled from 'styled-components';
+
+export const StyledFieldset = styled.fieldset`
   box-shadow: 6px 6px 19px 0px rgba(47, 50, 50, 0.54);
   border-radius: 5px;
   border: none;
@@ -8,21 +10,21 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 30;
-}
 
-.form__fieldset::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #cfdde3c1;
-  border-radius: 5px;
-  position: absolute;
-  z-index: -10;
-}
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #cfdde3c1;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -10;
+  }
+`;
 
-.form__paragraph {
+export const StyledParagraph = styled.p`
   margin-bottom: 10px;
   font-size: 15px;
   letter-spacing: 3px;
@@ -31,14 +33,18 @@
   background-color: #9ac0d8d7;
   max-width: 150px;
   padding: 5px;
-}
+`;
 
-.form__list {
+export const StyledWrapperSelect = styled.li`
+  margin: ${props => props.margin};
+`;
+
+export const StyledList = styled.ul`
   padding: 10px;
   list-style: none;
-}
+`;
 
-.form__labelText {
+export const StyledText = styled.span`
   display: inline-block;
   padding: 8px;
   margin-bottom: 5px;
@@ -47,20 +53,4 @@
   letter-spacing: 1px;
   word-spacing: 3px;
   background-color: #9ac0d8d7;
-}
-
-.form__labelText--middle {
-  margin-top: 30px;
-}
-
-.form__labelText--last {
-  margin-top: 40px;
-}
-
-.form__footer {
-  margin-top: 20px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+`;

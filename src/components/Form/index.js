@@ -1,10 +1,16 @@
-import './style.css';
 import { useState, useRef } from 'react';
 import { Result } from './Result';
 import { Input } from './Input';
 import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
+import {
+  StyledFieldset,
+  StyledParagraph,
+  StyledList,
+  StyledText,
+  StyledWrapperSelect
+} from './styled';
 
 export const Form = ({ currencies, result, calculateResult }) => {
   const [amount, setAmount] = useState();
@@ -31,41 +37,31 @@ export const Form = ({ currencies, result, calculateResult }) => {
   };
 
   return (
-    <form 
-      onSubmit={onFormSubmit}
-      className="form">
-      <fieldset className="form__fieldset">
-        <p className="form__paragraph">*fields required</p>
+    <form onSubmit={onFormSubmit}>
+      <StyledFieldset>
+        <StyledParagraph>*fields required</StyledParagraph>
         <Clock />
-          <ul className="form__list">
-            <li>
+          <StyledList>
+            <StyledWrapperSelect>
               <label>
-                <span className="form__labelText">
-                  Currency from*: 
-                </span>
+                <StyledText>Currency from*:</StyledText>
                 <Select 
                   currencies={currencies}
                   value={currencyFrom} 
                   onChange={setCurrencyFrom} 
                 />
               </label>
-            </li>
-            <li>
+            </StyledWrapperSelect>
+            <StyledWrapperSelect margin="30px 0 30px">
               <label>
-                <span className="form__labelText form__labelText--middle">
-                  Currency to*:
-                </span>
-                <div className="form__selectVisual">
+                <StyledText>Currency to*:</StyledText>
                 <Select 
                   currencies={currencies}
                   value={currencyTo} 
                   onChange={setCurrencyTo} 
                 />
-                  <span className="focus"></span>
-                  <span className="form__selectVisual form__selectVisual--arrow"></span>
-                </div>
               </label>
-            </li>
+            </StyledWrapperSelect>
             <li>
               <Input 
                 setAmount={setAmount}
@@ -73,14 +69,10 @@ export const Form = ({ currencies, result, calculateResult }) => {
                 getIdCurrencyFrom={getIdCurrencyFrom}
               />
             </li>
-            <li className="form__information">
-              <Result
-                result={result}
-              />
-            </li>
-          </ul>
+            <Result result={result} />
+          </StyledList>
           <Button title="count amount" />
-      </fieldset>
+      </StyledFieldset>
     </form>
   ); 
 };
