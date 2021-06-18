@@ -1,11 +1,14 @@
-import './style.css';
+import {
+  SelectWrapper,
+  StyledSelect,
+  StyledArrow,
+} from './styled';
 
 export const Select = ({ currencies, value, onChange }) => (
-  <div className="form__selectVisual">
-    <select 
+  <SelectWrapper>
+    <StyledSelect 
       value={value}
       onChange={({ target }) => onChange(target.value)}
-      className="form__selectVisual-select"
     >
       {currencies.map(currency => 
         (
@@ -14,8 +17,8 @@ export const Select = ({ currencies, value, onChange }) => (
           </option>
         ))
       }
-    </select>
-    <span className="focus"></span>
-    <span className="form__selectVisual form__selectVisual--arrow"></span>
-  </div>
+    </StyledSelect>
+    <span></span>
+    <StyledArrow />
+  </SelectWrapper>
 );
