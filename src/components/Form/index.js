@@ -14,8 +14,8 @@ import {
 
 export const Form = ({ currencies, result, calculateResult }) => {
   const [amount, setAmount] = useState();
-  const [currencyFrom, setCurrencyFrom] = useState("🇬🇧 British Pound");
-  const [currencyTo, setCurrencyTo] = useState("🇵🇱 Polish Zloty");
+  const [currencyFrom, setCurrencyFrom] = useState(currencies[1].name);
+  const [currencyTo, setCurrencyTo] = useState(currencies[16].name);
 
   const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
   const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
