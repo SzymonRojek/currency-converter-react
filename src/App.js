@@ -12,7 +12,7 @@ export function App() {
   const calculateResult = ( amount, getRateCurrencyTo, getIdCurrencyTo ) => {
 
     setResult({
-      value: (+amount * getRateCurrencyTo).toFixed(2), 
+      value: +amount * getRateCurrencyTo, 
       id: getIdCurrencyTo, 
       amount
     });
