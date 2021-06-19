@@ -2,7 +2,7 @@ export const currencies = [
   {
     id: 'AL',
     name : '🇦🇱 Albanian Lek', 
-    exchangeTo : [
+    exchange : [
       {
         id: 'AL', 
         rate : 1
@@ -92,7 +92,7 @@ export const currencies = [
   {
     id : 'GB',
     name : '🇬🇧 British Pound',  
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 140.222 
@@ -182,7 +182,7 @@ export const currencies = [
   {
     id : 'CZ',
     name : '🇨🇿 Czech Koruna', 
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 4.70172
@@ -272,7 +272,7 @@ export const currencies = [
   {
     id : 'CA',
     name : '🇨🇦 Canadian Dollar',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 81.5189
@@ -362,7 +362,7 @@ export const currencies = [
   {
     id : 'DK',
     name : '🇩🇰 Danish Krone',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 16.3997
@@ -452,7 +452,7 @@ export const currencies = [
   {
     id : 'EU',
     name : '🇪🇺 Euro',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate :  121.948
@@ -542,7 +542,7 @@ export const currencies = [
   {
     id : 'FR',
     name : '🇫🇷 French Frank',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 18.5908
@@ -632,7 +632,7 @@ export const currencies = [
   {
     id : 'GI',
     name : '🇬🇮 Gibraltar Pound',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 140.222
@@ -722,7 +722,7 @@ export const currencies = [
   {
     id: 'HU',
     name : '🇭🇺 Hungarian Forint', 
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 0.33657
@@ -812,7 +812,7 @@ export const currencies = [
   {
     id : 'IT',
     name : '🇮🇹 Italian Lira', 
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 0.06298
@@ -902,7 +902,7 @@ export const currencies = [
   {
     id : 'JP',
     name : '🇯🇵 Japanese Yen',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 0.92698
@@ -992,7 +992,7 @@ export const currencies = [
   {
     id : 'KZ',
     name : '🇰🇿 Kazakhstan Tenge',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 0.23764
@@ -1082,7 +1082,7 @@ export const currencies = [
   {
     id : 'LA',
     name : '🇱🇦 Lao Kip',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 0.01067
@@ -1172,7 +1172,7 @@ export const currencies = [
   {
     id : 'MD',
     name : '🇲🇩 Moldovan Leu',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 5.66997
@@ -1262,7 +1262,7 @@ export const currencies = [
   {
     id : 'NO',
     name : '🇳🇴 Norwegian Kroner',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 12.2139
@@ -1352,7 +1352,7 @@ export const currencies = [
   {
     id : 'OM',
     name : '🇴🇲 Omani Rial',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 263.642
@@ -1442,7 +1442,7 @@ export const currencies = [
   {
     id : 'PL',
     name : '🇵🇱 Polish Zloty', 
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 26.6228 
@@ -1532,7 +1532,7 @@ export const currencies = [
   {
     id : 'RU',
     name : '🇷🇺 Russian Rouble',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 1.34992
@@ -1622,7 +1622,7 @@ export const currencies = [
   {
     id : 'SK',
     name : '🇸🇰 Slovak Koruna', 
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 4.04793
@@ -1712,7 +1712,7 @@ export const currencies = [
   {
     id : 'ES',
     name : '🇪🇸 Spanish Peseta',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate : 0.73292
@@ -1802,7 +1802,7 @@ export const currencies = [
   {
     id : 'US',
     name : '🇺🇸 US Dollar',
-    exchangeTo : [
+    exchange : [
       {
         id : 'AL', 
         rate :  100.885
