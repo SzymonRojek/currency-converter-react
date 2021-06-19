@@ -17,8 +17,13 @@ export const Form = ({ currencies, result, calculateResult }) => {
   const [currencyFrom, setCurrencyFrom] = useState(currencies[1].name);
   const [currencyTo, setCurrencyTo] = useState(currencies[16].name);
 
-  const currenciesToExchange = currencies.find( ({ name }) => name === currencyFrom);
+  const getCurrenciesToExchange = currencies.find( ({ name }) => name === currencyFrom).exchange;
+
   const getIdCurrencyFrom = currencies.find( ({ name }) => name === currencyFrom).id;
+
+  const getTargetId = currencies.find( ({ name }) => name === currencyTo).id;
+  
+  const getTargetRate = getCurrenciesToExchange.find( ({ id }) => id === getTargetId).rate;
 
   const inputTypedAmount = useRef();
   
@@ -29,10 +34,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
   const onFormSubmit = event => {
     event.preventDefault();
   
-    const getRateCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).rate;
-    const getIdCurrencyTo = currenciesToExchange.exchangeTo.find( ({ name }) => name === currencyTo).id;
-  
-    calculateResult(amount, getRateCurrencyTo, getIdCurrencyTo);
+    calculateResult(amount, getTargetRate, getIdCurrencyFrom);
     clearInput();
   };
 
@@ -69,7 +71,10 @@ export const Form = ({ currencies, result, calculateResult }) => {
                 getIdCurrencyFrom={getIdCurrencyFrom}
               />
             </li>
-            <Result result={result} />
+            <Result 
+              currencyFrom={currencyFrom}
+              result={result} 
+            />
           </StyledList>
           <Button title="count amount" />
       </StyledFieldset>
