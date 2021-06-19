@@ -56,4 +56,11 @@ export const StyledInput = styled.input`
     pointer-events: none;
     z-index: 1;
   }
+
+  @media (min-width: 640px) {
+    & {
+      padding: 15px;
+      font-size: 18px;
+    }
+  }
 `;

@@ -34,6 +34,13 @@ export const StyledSelect = styled.select`
     pointer-events: none;
     z-index: 1;
   }
+
+  @media (min-width: 640px) {
+    & {
+      padding: 15px;
+      font-size: 18px;
+    }
+  }
 `;
 
 export const StyledArrow = styled.span`
