@@ -4,6 +4,8 @@ import { Input } from './Input';
 import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
+import { currencies } from '../../currencies';
+
 import {
   StyledFieldset,
   StyledParagraph,
@@ -12,10 +14,11 @@ import {
   StyledWrapperSelect
 } from './styled';
 
-export const Form = ({ currencies, result, calculateResult }) => {
+export const Form = () => {
   const [amount, setAmount] = useState();
   const [currencyFrom, setCurrencyFrom] = useState(currencies[1].name);
   const [currencyTo, setCurrencyTo] = useState(currencies[16].name);
+  const [result, setResult] = useState({});
 
   const getCurrenciesToExchange = currencies.find( ({ name }) => name === currencyFrom).exchange;
 
@@ -25,11 +28,18 @@ export const Form = ({ currencies, result, calculateResult }) => {
   
   const getTargetRate = getCurrenciesToExchange.find( ({ id }) => id === getTargetId).rate;
 
+  const calculateResult = () => {
+    setResult({
+      amount,
+      calculatedAmount: +amount * getTargetRate, 
+      getIdCurrencyFrom,
+      getTargetId,
+    });
+  };
+
   const inputTypedAmount = useRef();
   
-  const clearInput = () => {
-   inputTypedAmount.current.value = "";
-  };
+  const clearInput = () => inputTypedAmount.current.value = "";
 
   const onFormSubmit = event => {
     event.preventDefault();
