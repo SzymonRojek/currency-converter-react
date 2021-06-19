@@ -2,7 +2,7 @@ import { ClockBox, StyledText } from './styled';
 import { useState, useEffect } from 'react';
 
 export const Clock = () => {
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {setDate(new Date())}, 1000);
