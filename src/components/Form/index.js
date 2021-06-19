@@ -34,7 +34,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
   const onFormSubmit = event => {
     event.preventDefault();
   
-    calculateResult(amount, getTargetRate, getIdCurrencyFrom);
+    calculateResult(amount, getTargetRate, getIdCurrencyFrom, getTargetId);
     clearInput();
   };
 
@@ -72,7 +72,6 @@ export const Form = ({ currencies, result, calculateResult }) => {
               />
             </li>
             <Result 
-              getTargetId={getTargetId}
               result={result} 
             />
           </StyledList>

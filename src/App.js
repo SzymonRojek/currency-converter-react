@@ -9,12 +9,13 @@ import { currencies } from './currencies';
 export function App() {
   const [result, setResult] = useState({});
 
-  const calculateResult = ( amount, getTargetRate, getIdCurrencyFrom ) => {
+  const calculateResult = ( amount, getTargetRate, getIdCurrencyFrom, getTargetId ) => {
 
     setResult({
-      value: +amount * getTargetRate, 
-      id: getIdCurrencyFrom, 
-      amount
+      amount,
+      calculatedAmount: +amount * getTargetRate, 
+      getIdCurrencyFrom,
+      getTargetId,
     });
   };
 
