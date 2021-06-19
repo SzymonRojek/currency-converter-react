@@ -72,7 +72,7 @@ export const Form = ({ currencies, result, calculateResult }) => {
               />
             </li>
             <Result 
-              currencyFrom={currencyFrom}
+              getTargetId={getTargetId}
               result={result} 
             />
           </StyledList>
