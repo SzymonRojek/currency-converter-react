@@ -64,7 +64,7 @@ export const Form = () => {
                 />
               </label>
             </StyledWrapperSelect>
-            <StyledWrapperSelect margin="30px 0 30px">
+            <StyledWrapperSelect middle>
               <label>
                 <StyledText>Currency to*:</StyledText>
                 <Select 

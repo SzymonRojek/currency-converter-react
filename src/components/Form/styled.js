@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledFieldset = styled.fieldset`
   box-shadow: 6px 6px 19px 0px rgba(47, 50, 50, 0.54);
@@ -36,7 +36,9 @@ export const StyledParagraph = styled.p`
 `;
 
 export const StyledWrapperSelect = styled.li`
-  margin: ${props => props.margin};
+  ${ ({ middle }) => middle && css`
+    margin: 30px 0 30px;
+  `};
 `;
 
 export const StyledList = styled.ul`
