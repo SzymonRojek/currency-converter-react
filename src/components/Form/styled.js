@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const StyledFieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
   box-shadow: 6px 6px 19px 0px rgba(47, 50, 50, 0.54);
   border-radius: 5px;
   border: none;
@@ -35,18 +35,27 @@ export const StyledParagraph = styled.p`
   padding: 5px;
 `;
 
-export const StyledWrapperSelect = styled.li`
-  ${ ({ middle }) => middle && css`
+export const Item = styled.li`
+  ${ ({ secondItem }) => secondItem && css`
     margin: 30px 0 30px;
   `};
+
+  ${ ({ lastItem }) => lastItem && css`
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 35px;
+    background-color: #9ac0d8d7;
+  `}
 `;
 
-export const StyledList = styled.ul`
+export const List = styled.ul`
   padding: 10px;
   list-style: none;
 `;
 
-export const StyledText = styled.span`
+export const StyledSpan = styled.span`
   display: inline-block;
   padding: 8px;
   margin-bottom: 5px;

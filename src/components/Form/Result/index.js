@@ -1,12 +1,12 @@
-import { InformationBox, StyledText } from './styled';
+import { TextResult } from './styled';
 
 export const Result = ({ result }) => (
-  <InformationBox>
-    <StyledText> 
+  <>
+    <TextResult> 
       cash in: {result?.amount} {result.getIdCurrencyFrom}
-    </StyledText>
-    <StyledText> 
+    </TextResult>
+    <TextResult> 
       cash out: {result.calculatedAmount ? result.calculatedAmount.toFixed(2) : ""} {result.getTargetId}
-    </StyledText>
-  </InformationBox>
+    </TextResult>
+  </>
 );

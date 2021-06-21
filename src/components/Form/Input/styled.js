@@ -4,7 +4,7 @@ export const Label = styled.label`
 margin-top: 120px;
 `;
 
-export const StyledText = styled.p`
+export const TextAmount = styled.p`
   display: inline-block;
   padding: 8px;
   margin-bottom: 5px;
@@ -15,11 +15,11 @@ export const StyledText = styled.p`
   background-color: #9ac0d8d7;
 `;
 
-export const InputWrapper = styled.div`
+export const Wrapper = styled.div`
   position: relative;
 `;
 
-export const StyledInput = styled.input`  
+export const InputNumber = styled.input`  
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;

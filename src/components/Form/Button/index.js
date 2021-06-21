@@ -1,9 +1,9 @@
-import { ButtonWrapper, StyledButton } from './styled';
+import { Wrapper, StyledButton } from './styled';
 
 export const Button = ({ title }) => (
-  <ButtonWrapper>
+  <Wrapper>
     <StyledButton> 
       {title}
     </StyledButton>
-  </ButtonWrapper>
+  </Wrapper>
 );

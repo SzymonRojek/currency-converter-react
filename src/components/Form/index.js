@@ -7,11 +7,11 @@ import { Clock } from './Clock';
 import { currencies } from '../../currencies';
 
 import {
-  StyledFieldset,
+  Fieldset,
   StyledParagraph,
-  StyledList,
-  StyledText,
-  StyledWrapperSelect
+  List,
+  StyledSpan,
+  Item
 } from './styled';
 
 export const Form = () => {
@@ -50,43 +50,45 @@ export const Form = () => {
 
   return (
     <form onSubmit={onFormSubmit}>
-      <StyledFieldset>
+      <Fieldset>
         <StyledParagraph>*fields required</StyledParagraph>
         <Clock />
-          <StyledList>
-            <StyledWrapperSelect>
+          <List>
+            <Item>
               <label>
-                <StyledText>Currency from*:</StyledText>
+                <StyledSpan>Currency from*:</StyledSpan>
                 <Select 
                   currencies={currencies}
                   value={currencyFrom} 
                   onChange={setCurrencyFrom} 
                 />
               </label>
-            </StyledWrapperSelect>
-            <StyledWrapperSelect middle>
+            </Item>
+            <Item secondItem>
               <label>
-                <StyledText>Currency to*:</StyledText>
+                <StyledSpan>Currency to*:</StyledSpan>
                 <Select 
                   currencies={currencies}
                   value={currencyTo} 
                   onChange={setCurrencyTo} 
                 />
               </label>
-            </StyledWrapperSelect>
-            <li>
+            </Item>
+            <Item>
               <Input 
                 setAmount={setAmount}
                 inputTypedAmount={inputTypedAmount}
                 getIdCurrencyFrom={getIdCurrencyFrom}
               />
-            </li>
-            <Result 
-              result={result} 
-            />
-          </StyledList>
+            </Item>
+            <Item lastItem>
+              <Result 
+                result={result} 
+              />
+            </Item>
+          </List>
           <Button title="count amount" />
-      </StyledFieldset>
+      </Fieldset>
     </form>
   ); 
 };

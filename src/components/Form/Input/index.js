@@ -1,17 +1,17 @@
 import { 
   Label, 
-  StyledText, 
-  InputWrapper, 
-  StyledInput,
+  TextAmount, 
+  Wrapper, 
+  InputNumber,
 } from './styled';
 
 export const Input = ({ amount, setAmount, inputTypedAmount, getIdCurrencyFrom }) => (
   <Label>
-    <StyledText>
+    <TextAmount>
       Amount in {getIdCurrencyFrom}*:
-    </StyledText>
-    <InputWrapper>
-      <StyledInput
+    </TextAmount>
+    <Wrapper>
+      <InputNumber
         ref={inputTypedAmount}
         value={amount}
         onChange={({ target }) => setAmount(target.value)} 
@@ -23,6 +23,6 @@ export const Input = ({ amount, setAmount, inputTypedAmount, getIdCurrencyFrom }
         required
       />
       <span></span>
-    </InputWrapper>
+    </Wrapper>
   </Label>
 );

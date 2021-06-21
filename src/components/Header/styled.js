@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeadingBox = styled.header``;
+export const StyledHeader = styled.header``;
 
 export const StyledHeading = styled.h1`
   padding-bottom: 10px;
