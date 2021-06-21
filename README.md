@@ -29,13 +29,13 @@
 <br>
 :white_check_mark: Functional Components 
 <br>
-:white_check_mark: Hooks: useState, useRef  <br>
-:white_check_mark: ES6+ features
-<br>
+:white_check_mark: Hooks: useState, useEffect  <br>
+:white_check_mark: Custom Hook <br>
 :white_check_mark: object Date()
 <br>
 :white_check_mark: setInterval()
-
+<br>
+:white_check_mark: ES6 Features
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
