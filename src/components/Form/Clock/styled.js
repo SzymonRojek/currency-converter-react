@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   margin: 50px 0 25px 0;
   text-align: center;
-  background-color: ${({ theme }) => theme.bgc.tertiary};
+  background-color: ${({ theme }) => theme.backgroundColor.tertiary};
   border-radius: 3px;
 `;
 

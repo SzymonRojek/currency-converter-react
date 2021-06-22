@@ -1,16 +1,10 @@
-/*
-
-bgc => background-color
-
-*/
-
 export const theme = {
   color: {
     primary: "rgba(255, 255, 255, 0.79)",
     secondary: "#186889",
     tertiary: "#3b3c47"
   },
-  bgc: {
+  backgroundColor: {
     primaryBody: "#2e86abc4",
     primaryOverlay: "#cfdde3c1",
     secondary100: "#9ac0d8d7",

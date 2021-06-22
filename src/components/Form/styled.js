@@ -17,7 +17,7 @@ export const Fieldset = styled.fieldset`
     height: 100%;
     top: 0;
     left: 0;
-    background-color: ${({ theme }) => theme.bgc.primaryOverlay};
+    background-color: ${({ theme }) => theme.backgroundColor.primaryOverlay};
     border-radius: 5px;
     position: absolute;
     z-index: -10;
@@ -30,7 +30,7 @@ export const StyledParagraph = styled.p`
   letter-spacing: 3px;
   word-spacing: 2px;
   color: ${({ theme }) => theme.color.secondary};
-  background-color: ${({ theme }) => theme.bgc.secondary100};
+  background-color: ${({ theme }) => theme.backgroundColor.secondary100};
   max-width: 150px;
   padding: 5px;
 `;
@@ -46,7 +46,7 @@ export const Item = styled.li`
     flex-direction: column;
     width: 100%;
     margin-top: 35px;
-    background-color: ${({ theme }) => theme.bgc.secondary100};
+    background-color: ${({ theme }) => theme.backgroundColor.secondary100};
   `}
 `;
 
@@ -63,5 +63,5 @@ export const StyledSpan = styled.span`
   color: ${({ theme }) => theme.color.secondary};
   letter-spacing: 1px;
   word-spacing: 3px;
-  background-color: ${({ theme }) => theme.bgc.secondary100};
+  background-color: ${({ theme }) => theme.backgroundColor.secondary100};
 `;

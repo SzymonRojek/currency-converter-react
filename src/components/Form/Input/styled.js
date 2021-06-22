@@ -12,7 +12,7 @@ export const TextAmount = styled.p`
   color: ${({ theme }) => theme.color.secondary};
   letter-spacing: 1px;
   word-spacing: 3px;
-  background-color: ${({ theme }) => theme.bgc.secondary100};
+  background-color: ${({ theme }) => theme.backgroundColor.secondary100};
 `;
 
 export const Wrapper = styled.div`
@@ -23,7 +23,7 @@ export const InputNumber = styled.input`
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;
-  background-color: ${({ theme }) => theme.bgc.secondary200};
+  background-color: ${({ theme }) => theme.backgroundColor.secondary200};
   box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
   border: none;
   border-radius: 3px;

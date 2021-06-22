@@ -10,7 +10,7 @@ export const StyledButton = styled.button`
   border-radius: 3px;
   border: none;
   color: ${({ theme }) => theme.color.primary};
-  background-color: ${({ theme }) => theme.bgc.secondary200};
+  background-color: ${({ theme }) => theme.backgroundColor.secondary200};
   box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
   letter-spacing: 1px;
   outline: none;
@@ -27,7 +27,7 @@ export const StyledButton = styled.button`
   }
 
   &:active {
-    background-color: ${({ theme }) => theme.bgc.accent};
+    background-color: ${({ theme }) => theme.backgroundColor.accent};
     transform: translateY(3px);
   }
 `;
