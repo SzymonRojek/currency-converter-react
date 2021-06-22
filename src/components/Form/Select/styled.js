@@ -8,8 +8,8 @@ export const StyledSelect = styled.select`
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;
-  background-color: #4d5061c1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  background-color: ${({ theme }) => theme.bgc.secondary200};
+  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
   border: none;
   border-radius: 3px;
   appearance: none;
@@ -20,7 +20,7 @@ export const StyledSelect = styled.select`
   display: inline-block;
   min-height: 35px;
   width: 100%;
-  color: rgba(255, 255, 255, 0.79);
+  color: ${({ theme }) => theme.color.primary};
   cursor: pointer;
 
   &:focus + span {
@@ -29,17 +29,15 @@ export const StyledSelect = styled.select`
     left: -1px;
     right: -1px;
     bottom: -1px;
-    border: 2px solid #186889;
+    border: 2px solid ${({ theme }) => theme.color.secondary};
     border-radius: 4px;
     pointer-events: none;
     z-index: 1;
   }
 
-  @media (min-width: 640px) {
-    & {
-      padding: 15px;
-      font-size: 18px;
-    }
+  @media (min-width: ${({theme}) =>theme.breakpoint.tablet}px) {
+    padding: 15px;
+    font-size: 18px;
   }
 `;
 
@@ -52,7 +50,7 @@ export const StyledArrow = styled.span`
   align-items: center;
   height: 100%;
   width: 2rem;
-  background-color: #3b3c47;
+  background-color: ${({ theme }) => theme.accent.bgc};
   pointer-events: none;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -69,6 +67,6 @@ export const StyledArrow = styled.span`
   &::before {
     border-left: var(--size) solid transparent;
     border-right: var(--size) solid transparent;
-    border-top: var(--size) solid rgba(255, 255, 255, 0.79);
+    border-top: var(--size) solid ${({ theme }) => theme.accent.arrow};
   }
 `;

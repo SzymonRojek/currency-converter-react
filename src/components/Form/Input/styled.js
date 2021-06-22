@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Label = styled.label`
-margin-top: 120px;
+  margin-top: 120px;
 `;
 
 export const TextAmount = styled.p`
@@ -9,10 +9,10 @@ export const TextAmount = styled.p`
   padding: 8px;
   margin-bottom: 5px;
   font-size: 15px;
-  color: #186889;
+  color: ${({ theme }) => theme.color.secondary};
   letter-spacing: 1px;
   word-spacing: 3px;
-  background-color: #9ac0d8d7;
+  background-color: ${({ theme }) => theme.bgc.secondary100};
 `;
 
 export const Wrapper = styled.div`
@@ -23,8 +23,8 @@ export const InputNumber = styled.input`
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;
-  background-color: #4d5061c1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  background-color: ${({ theme }) => theme.bgc.secondary200};
+  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
   border: none;
   border-radius: 3px;
   appearance: none;
@@ -34,10 +34,10 @@ export const InputNumber = styled.input`
   outline: none;
   min-height: 35px;
   width: 100%;
-  color: rgba(255, 255, 255, 0.79);
+  color: ${({ theme }) => theme.color.primary};
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.79);
+    color: ${({ theme }) => theme.color.primary};
   }
 
   &::-webkit-inner-spin-button,
@@ -51,16 +51,14 @@ export const InputNumber = styled.input`
     left: -1px;
     right: -1px;
     bottom: -1px;
-    border: 2px solid #186889;
+    border: 2px solid ${({ theme }) => theme.color.secondary};
     border-radius: 4px;
     pointer-events: none;
     z-index: 1;
   }
 
-  @media (min-width: 640px) {
-    & {
-      padding: 15px;
-      font-size: 18px;
-    }
+  @media (min-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+    padding: 15px;
+    font-size: 18px;
   }
 `;

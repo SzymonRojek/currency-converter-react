@@ -9,8 +9,9 @@ export const StyledButton = styled.button`
   padding: 10px 15px;
   border-radius: 3px;
   border: none;
-  color: rgba(255, 255, 255, 0.79);
-  background-color: #4d5061c1;
+  color: ${({ theme }) => theme.color.primary};
+  background-color: ${({ theme }) => theme.bgc.secondary200};
+  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
   letter-spacing: 1px;
   outline: none;
   border: 2px solid transparent;
@@ -22,16 +23,11 @@ export const StyledButton = styled.button`
   }
 
   &:focus {
-    border: 2px solid #186889;
+    border: 2px solid ${({ theme }) => theme.color.primary};
   }
 
   &:active {
-    background-color: #3b3c47;
+    background-color: ${({ theme }) => theme.bgc.accent};
     transform: translateY(3px);
-  }
-
-  &:disabled {
-    background-color: #aeb0ba;
-    cursor: not-allowed;
   }
 `;
