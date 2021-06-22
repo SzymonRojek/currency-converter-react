@@ -12,7 +12,7 @@ export const theme = {
     tertiary: "#f0f9ff"
   },
   accent: {
-    bgc: "#3b3c47",
+    backgroundColor: "#3b3c47",
     arrow: "rgba(255, 255, 255, 0.79)",
     shadow100: "rgba(47, 50, 50, 0.54)",
     shadow200: "rgba(0, 0, 0, .5)"

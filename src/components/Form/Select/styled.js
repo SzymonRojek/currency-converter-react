@@ -8,7 +8,7 @@ export const StyledSelect = styled.select`
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;
-  background-color: ${({ theme }) => theme.bgc.secondary200};
+  background-color: ${({ theme }) => theme.backgroundColor.secondary200};
   box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
   border: none;
   border-radius: 3px;
@@ -50,7 +50,7 @@ export const StyledArrow = styled.span`
   align-items: center;
   height: 100%;
   width: 2rem;
-  background-color: ${({ theme }) => theme.accent.bgc};
+  background-color: ${({ theme }) => theme.accent.backgroundColor};
   pointer-events: none;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
