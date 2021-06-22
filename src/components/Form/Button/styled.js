@@ -23,7 +23,7 @@ export const StyledButton = styled.button`
   }
 
   &:focus {
-    border: 2px solid ${({ theme }) => theme.color.primary};
+    border: 2px solid ${({ theme }) => theme.color.secondary};
   }
 
   &:active {
