@@ -4,7 +4,7 @@ export const Fieldset = styled.fieldset`
   box-shadow: 6px 6px 19px 0px ${({ theme }) => theme.accent.shadow100};
   border-radius: 5px;
   border: none;
-  background-image: url('https://www.researchgate.net/profile/M-Basri/publication/320925728/figure/fig3/AS:631619933192230@1527601335529/India-GDP-Growth-Interest-Rate-Forex-Reserves-Exchange-Rates-and-Current-Account.png');
+  background-image: url(${({ theme }) => theme.img.url});
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;

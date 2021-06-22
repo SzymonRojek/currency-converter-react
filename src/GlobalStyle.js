@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     font-family: 'Antonio', sans-serif;
-    background-color: #2e86abc4;
+    background-color: ${({ theme }) => theme.backgroundColor.primaryBody};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
