@@ -27,11 +27,12 @@ export const Fieldset = styled.fieldset`
 export const StyledParagraph = styled.p`
   margin-bottom: 10px;
   font-size: 15px;
+  font-weight: 600;
   letter-spacing: 3px;
   word-spacing: 2px;
-  color: ${({ theme }) => theme.color.secondary};
+  color: ${({ theme }) => theme.color.tertiary};
   background-color: ${({ theme }) => theme.backgroundColor.secondary100};
-  max-width: 150px;
+  max-width: 180px;
   padding: 5px;
 `;
 
