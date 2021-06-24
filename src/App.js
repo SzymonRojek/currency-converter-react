@@ -7,6 +7,8 @@ export const App = () => (
   <Container>
     <Header title="Currency Converter" />
     <Form />
-    <Footer title="© 2021 | Coded by Szymon Rojek" />
+    <Footer>
+    © 2021 | Coded by Szymon Rojek 
+    </Footer>
   </Container>
 );

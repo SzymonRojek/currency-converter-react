@@ -1,9 +1,7 @@
-import { StyledFooter, StyledText } from './styled';
+import styled from "styled-components";
 
-export const Footer = ({ title }) => (
-  <StyledFooter>
-    <StyledText>
-      {title}
-    </StyledText>
-  </StyledFooter>
-);
+export const Footer = styled.footer`
+  text-align: center;
+  padding-top: 30px;
+  font-size: 18px;
+`;
