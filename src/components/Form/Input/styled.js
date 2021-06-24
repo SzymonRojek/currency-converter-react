@@ -57,7 +57,7 @@ export const InputNumber = styled.input`
     z-index: 1;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+  @media (min-width: ${({ theme }) => theme.breakpoint.ipad}px) {
     padding: 15px;
     font-size: 18px;
   }

@@ -21,7 +21,6 @@ export const theme = {
     shadow200: "rgba(0, 0, 0, .5)"
   },
   breakpoint: {
-    mobile: 767,
-    tablet: 768
+    ipad: 768
   }
 };
