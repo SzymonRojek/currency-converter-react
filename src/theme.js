@@ -7,7 +7,7 @@ export const theme = {
   backgroundColor: {
     primaryBody: "#2e86abc4",
     primaryOverlay: "#cfdde3c1",
-    secondary100: "#9ac0d8d7",
+    secondary100: "#bcd5e4d7",
     secondary200: "#4d5061c1",
     tertiary: "#f0f9ff"
   },
