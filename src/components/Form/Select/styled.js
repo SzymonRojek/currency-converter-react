@@ -1,45 +1,16 @@
 import styled from 'styled-components';
+import { baseFormControlStyles } from '../Input/styled';
 
-export const SelectWrapper = styled.div`
+export const Wrapper = styled.div`
    position: relative;
 `;
 
-export const StyledSelect = styled.select`
-  padding: 8px 30px 8px 10px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  background-color: ${({ theme }) => theme.backgroundColor.secondary200};
-  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
-  border: none;
-  border-radius: 3px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  outline: none;
-  display: inline-block;
-  min-height: 35px;
-  width: 100%;
-  color: ${({ theme }) => theme.color.primary};
-  cursor: pointer;
-
-  &:focus + span {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 2px solid ${({ theme }) => theme.color.secondary};
-    border-radius: 4px;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  @media (min-width: ${({theme}) =>theme.breakpoint.ipad}px) {
-    padding: 15px;
-    font-size: 18px;
-  }
+export let StyledSelect = styled.select`
+  ${baseFormControlStyles}
+  cursor: pointer; 
 `;
+
+const size = "5px";
 
 export const StyledArrow = styled.span`
   position: absolute;
@@ -57,7 +28,7 @@ export const StyledArrow = styled.span`
 
   &::before,
   &::after {
-    --size: 5px;
+    ${size};
     content: '';
     position: absolute;
     width: 0;
@@ -65,8 +36,8 @@ export const StyledArrow = styled.span`
   }
 
   &::before {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid ${({ theme }) => theme.accent.arrow};
+    border-left: ${size} solid transparent;
+    border-right: ${size} solid transparent;
+    border-top: ${size} solid ${({ theme }) => theme.accent.arrow};
   }
 `;

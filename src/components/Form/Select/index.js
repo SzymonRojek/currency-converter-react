@@ -1,11 +1,11 @@
 import {
-  SelectWrapper,
+  Wrapper,
   StyledSelect,
   StyledArrow,
 } from './styled';
 
 export const Select = ({ currencies, value, onChange }) => (
-  <SelectWrapper>
+  <Wrapper>
     <StyledSelect 
       value={value}
       onChange={({ target }) => onChange(target.value)}
@@ -18,7 +18,6 @@ export const Select = ({ currencies, value, onChange }) => (
         ))
       }
     </StyledSelect>
-    <span></span>
     <StyledArrow />
-  </SelectWrapper>
+  </Wrapper>
 );
