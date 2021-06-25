@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Label = styled.label`
   margin-top: 120px;
 `;
 
-export const TextAmount = styled.p`
+export const TextAmount = styled.span`
   display: inline-block;
   padding: 8px;
   margin-bottom: 5px;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 
-export const InputNumber = styled.input`  
+export const baseFormControlStyles = css`
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;
@@ -36,29 +36,25 @@ export const InputNumber = styled.input`
   width: 100%;
   color: ${({ theme }) => theme.color.primary};
 
-  &::placeholder {
-    color: ${({ theme }) => theme.color.primary};
-  }
-
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
 
-  &:focus + span {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 2px solid ${({ theme }) => theme.color.secondary};
-    border-radius: 4px;
-    pointer-events: none;
-    z-index: 1;
+  &:focus {
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.color.secondary};
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoint.ipad}px) {
     padding: 15px;
     font-size: 18px;
+  }
+`;
+
+export const StyledInput = styled.input`  
+  ${baseFormControlStyles};
+ 
+  &::placeholder {
+    color: ${({ theme }) => theme.color.primary};
   }
 `;
