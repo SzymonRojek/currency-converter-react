@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const TextDate = styled.p`
- padding: 8px 0 8px 0;
+  padding: 8px 0 8px 0;
   font-size: 20px;
   color: ${({ theme }) => theme.color.secondary};
   line-height: 1.8;
