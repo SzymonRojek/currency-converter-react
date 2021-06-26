@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components';
 
 export const Fieldset = styled.fieldset`
-  box-shadow: 6px 6px 19px 0px ${({ theme }) => theme.accent.shadow100};
+  box-shadow: 6px 6px 19px 0px ${({ theme }) => theme.accent.greyShadow};
   border-radius: 5px;
   border: none;
-  background-image: url(${({ theme }) => theme.img.url});
+  background-image: url(${({ theme }) => theme.image.url});
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  position: relative; 
   z-index: 30;
 
   &::after {
@@ -17,7 +17,7 @@ export const Fieldset = styled.fieldset`
     height: 100%;
     top: 0;
     left: 0;
-    background-color: ${({ theme }) => theme.backgroundColor.primaryOverlay};
+    background-color: ${({ theme }) => theme.backgroundColor.fieldsetOverlay};
     border-radius: 5px;
     position: absolute;
     z-index: -10;
@@ -31,7 +31,7 @@ export const StyledParagraph = styled.p`
   letter-spacing: 3px;
   word-spacing: 2px;
   color: ${({ theme }) => theme.color.tertiary};
-  background-color: ${({ theme }) => theme.backgroundColor.secondary100};
+  background-color: ${({ theme }) => theme.backgroundColor.label};
   max-width: 180px;
   padding: 5px;
 `;
@@ -47,7 +47,7 @@ export const Item = styled.li`
     flex-direction: column;
     width: 100%;
     margin-top: 35px;
-    background-color: ${({ theme }) => theme.backgroundColor.secondary100};
+    background-color: ${({ theme }) => theme.backgroundColor.label};
   `}
 `;
 
@@ -64,5 +64,5 @@ export const StyledSpan = styled.span`
   color: ${({ theme }) => theme.color.secondary};
   letter-spacing: 1px;
   word-spacing: 3px;
-  background-color: ${({ theme }) => theme.backgroundColor.secondary100};
+  background-color: ${({ theme }) => theme.backgroundColor.label};
 `;

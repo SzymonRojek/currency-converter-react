@@ -12,7 +12,7 @@ export const TextAmount = styled.span`
   color: ${({ theme }) => theme.color.secondary};
   letter-spacing: 1px;
   word-spacing: 3px;
-  background-color: ${({ theme }) => theme.backgroundColor.secondary100};
+  background-color: ${({ theme }) => theme.backgroundColor.label};
 `;
 
 export const Wrapper = styled.div`
@@ -23,8 +23,8 @@ export const baseFormControlStyles = css`
   padding: 8px 30px 8px 10px;
   font-size: 16px;
   letter-spacing: 2px;
-  background-color: ${({ theme }) => theme.backgroundColor.secondary200};
-  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.shadow200};
+  background-color: ${({ theme }) => theme.backgroundColor.field};
+  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.darkShadow};
   border: none;
   border-radius: 3px;
   appearance: none;

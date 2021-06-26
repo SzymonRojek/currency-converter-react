@@ -21,7 +21,7 @@ export const StyledArrow = styled.span`
   align-items: center;
   height: 100%;
   width: 2rem;
-  background-color: ${({ theme }) => theme.accent.backgroundColor};
+  background-color: ${({ theme }) => theme.accent.boxArrow};
   pointer-events: none;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
