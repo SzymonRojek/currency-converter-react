@@ -26,7 +26,7 @@ export const theme = {
     boxClock: colorNames.aliceBlue
   },
   active: {
-    button: colorNames.ebb
+    button: colorNames.tuna
   },
   image: {
     url: 'https://www.researchgate.net/profile/M-Basri/publication/320925728/figure/fig3/AS:631619933192230@1527601335529/India-GDP-Growth-Interest-Rate-Forex-Reserves-Exchange-Rates-and-Current-Account.png'
