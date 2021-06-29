@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const Fieldset = styled.fieldset`
   box-shadow: 6px 6px 19px 0px ${({ theme }) => theme.accent.greyShadow};
@@ -65,4 +65,39 @@ export const StyledSpan = styled.span`
   letter-spacing: 1px;
   word-spacing: 3px;
   background-color: ${({ theme }) => theme.backgroundColor.label};
+`;
+
+export const InformationLoader = styled.div`
+  width: 100%;
+  min-height: 500px;
+  padding: 20px;
+  font-size: 25px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+`;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const CircleLoading = styled.div`
+  width: 30px;
+  height: 30px;
+  margin: 50px auto;
+  border: solid 5px rgba(255, 255, 255, 0.79);
+  border-top: solid 5px #186889;
+  border-radius: 50%;
+  animation: ${rotate} 1s linear infinite;
 `;

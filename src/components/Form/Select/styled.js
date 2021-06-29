@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
    position: relative;
 `;
 
-export let StyledSelect = styled.select`
+export const StyledSelect = styled.select`
   ${baseFormControlStyles}
   cursor: pointer; 
 `;

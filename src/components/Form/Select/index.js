@@ -4,16 +4,16 @@ import {
   StyledArrow,
 } from './styled';
 
-export const Select = ({ currencies, value, onChange }) => (
+export const Select = ({ rates, value, onChange }) => (
   <Wrapper>
     <StyledSelect 
       value={value}
       onChange={({ target }) => onChange(target.value)}
     >
-      {currencies.map(currency => 
+      {Object.keys(rates).map(value => 
         (
-          <option key={currency.id}>
-            {currency.name}
+          <option key={value} value={value}>
+            {value} 
           </option>
         ))
       }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useRates = () => {
+export const useApiRates = () => {
   const [ratesData, setRatesData] = useState({
     state: "loading...",
   });
@@ -10,14 +10,14 @@ export const useRates = () => {
 
       setTimeout(() => {
         fetch("https://api.exchangerate.host/latest")
-          .then((response) => {
+          .then(response => {
             if (!response.ok) {
               throw new Error(response.statusText);
             }
             return response;
           })
-          .then((response) => response.json())
-          .then((response) =>
+          .then(response => response.json())
+          .then(response =>
             setRatesData({
               date: response.date,
               rates: response.rates,
@@ -26,8 +26,8 @@ export const useRates = () => {
           .catch(setRatesData({ state: "error" }));
       });
     };
+    setTimeout(getApiRates, 1 * 30_000);
 
-    setTimeout(getApiRates, 1 * 1000);
   }, []);
   
   return ratesData;
