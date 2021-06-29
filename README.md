@@ -35,7 +35,9 @@
 <br>
 :white_check_mark: setInterval()
 <br>
-:white_check_mark: ES6 Features
+:white_check_mark: ES6 + features
+<br>
+:white_check_mark: Fetch API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
