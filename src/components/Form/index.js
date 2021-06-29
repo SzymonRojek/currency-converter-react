@@ -9,31 +9,34 @@ import { useApiRates } from "../../useApiRates";
 import {
   Fieldset,
   InformationLoader,
+  CircleLoading,
   StyledParagraph,
   List,
   StyledSpan,
   Item,
-  CircleLoading
 } from './styled';
 
 export const Form = () => {
   const [amount, setAmount] = useState();
-  const [currencyFrom, setCurrencyFrom] = useState("CAD");
-  const [currencyTo, setCurrencyTo] = useState("PL");
+  const [currencyFrom, setCurrencyFrom] = useState("GBP");
+  const [currencyTo, setCurrencyTo] = useState("PLN");
   const [result, setResult] = useState({});
 
   const ratesData = useApiRates();
-console.log(ratesData)
+
   const calculateResult = (currencyFrom, currencyTo, amount) => {
     const rate = ratesData.rates[currencyFrom];
     const sourceRate = ratesData.rates[currencyTo];
 
     setResult({
       amount,
-      calculatedAmount: (+amount * rate) / sourceRate,
+      calculatedAmount: +amount * sourceRate / rate,
+      currencyFrom,
+      currencyTo,
     });
   };
 
+  console.log(result)
   const inputTypedAmount = useRef();
   
   const clearInput = () => inputTypedAmount.current.value = "";
@@ -56,9 +59,8 @@ console.log(ratesData)
           </InformationLoader>
         ) : ratesData.state === "error" ? (
           <InformationLoader>
-            No Internet
-            Try:
-            Checking the network cables, modem and router
+            No Internet.
+            Try: Checking the network cables, modem and router
             Reconnecting to Wi-Fi
           </InformationLoader>
         ) : (
@@ -90,6 +92,7 @@ console.log(ratesData)
                 <Input 
                   setAmount={setAmount}
                   inputTypedAmount={inputTypedAmount}
+                  currencyFrom={currencyFrom}
                 />
               </Item>
               <Item lastItem>
