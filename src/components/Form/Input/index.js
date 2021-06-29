@@ -5,10 +5,10 @@ import {
   StyledInput,
 } from './styled';
 
-export const Input = ({ amount, setAmount, inputTypedAmount, getIdCurrencyFrom }) => (
+export const Input = ({ amount, setAmount, inputTypedAmount, currencyFrom }) => (
   <Label>
     <TextAmount>
-      Amount in {getIdCurrencyFrom}*:
+      Amount in {currencyFrom}*:
     </TextAmount>
     <Wrapper>
       <StyledInput
