@@ -26,7 +26,7 @@ export const useApiRates = () => {
           .catch(setRatesData({ state: "error" }));
       });
     };
-    setTimeout(getApiRates, 1 * 30_000);
+    setTimeout(getApiRates, 1 * 2_000);
 
   }, []);
   
