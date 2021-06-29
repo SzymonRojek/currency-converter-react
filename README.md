@@ -37,7 +37,7 @@
 <br>
 :white_check_mark: ES6 + features
 <br>
-:white_check_mark: Fetch API
+:white_check_mark: Fetch Exchange rates API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
