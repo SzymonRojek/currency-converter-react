@@ -101,3 +101,9 @@ export const CircleLoading = styled.div`
   border-radius: 50%;
   animation: ${rotate} 1s linear infinite;
 `;
+
+export const UpdateText = styled.p`
+ color: ${ ({ theme }) => theme.color.tertiary};
+ font-size: 15px;
+ text-align: right;
+`;

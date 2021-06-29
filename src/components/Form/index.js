@@ -14,6 +14,7 @@ import {
   List,
   StyledSpan,
   Item,
+  UpdateText
 } from './styled';
 
 export const Form = () => {
@@ -36,12 +37,10 @@ export const Form = () => {
     });
   };
 
-  console.log(result)
   const inputTypedAmount = useRef();
   
   const clearInput = () => inputTypedAmount.current.value = "";
 
-  console.log(currencyFrom, currencyTo)
   const onFormSubmit = event => {
     event.preventDefault();
   
@@ -99,9 +98,11 @@ export const Form = () => {
                 <Result 
                   result={result} 
                 />
+                
               </Item>
             </List>
             <Button title="count amount" />
+            <UpdateText>Last update {ratesData.date}</UpdateText>
           </>
         )}
       </Fieldset>
