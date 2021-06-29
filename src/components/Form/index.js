@@ -54,7 +54,7 @@ export const Form = () => {
         {ratesData.state === "loading..." ? (
           <InformationLoader>
             <CircleLoading />
-            Loading data from the European Central Bank...😄
+            Loading data from the European Central Bank
           </InformationLoader>
         ) : ratesData.state === "error" ? (
           <InformationLoader>

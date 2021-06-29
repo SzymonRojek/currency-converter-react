@@ -79,7 +79,6 @@ export const InformationLoader = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
- 
 `;
 
 const rotate = keyframes`
@@ -93,13 +92,13 @@ const rotate = keyframes`
 `;
 
 export const CircleLoading = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin: 50px auto;
-  border: solid 5px rgba(255, 255, 255, 0.79);
+  border: solid 4px rgba(255, 255, 255, 0.79);
   border-top: solid 5px #186889;
   border-radius: 50%;
-  animation: ${rotate} 1s linear infinite;
+  animation: ${rotate} 1.5s linear infinite;
 `;
 
 export const UpdateText = styled.p`
