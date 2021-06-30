@@ -7,9 +7,9 @@ export const useApiRates = () => {
 
   useEffect(() => {
     const getApiRates = () => {
+      const promise = fetch("https://api.exchangerate.host/latest");
 
-      setTimeout(() => {
-        fetch("https://api.exchangerate.host/latest")
+        promise
           .then(response => {
             if (!response.ok) {
               throw new Error(response.statusText);
@@ -24,7 +24,6 @@ export const useApiRates = () => {
             })
           )
           .catch(setRatesData({ state: "error" }));
-      });
     };
     setTimeout(getApiRates, 1 * 2_000);
 
