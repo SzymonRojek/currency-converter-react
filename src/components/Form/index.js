@@ -5,16 +5,14 @@ import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
 import { useApiRates } from "../../useApiRates";
+import { Loader} from "./InformationLoader";
 
 import {
   Fieldset,
-  InformationLoader,
-  CircleLoading,
   StyledParagraph,
   List,
   StyledSpan,
   Item,
-  UpdateText
 } from './styled';
 
 export const Form = () => {
@@ -48,22 +46,9 @@ export const Form = () => {
     clearInput();
   };
 
-  return (
+  return ratesData.state === "loading..." || ratesData.state === "error" ? (<Loader />) : (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
-        {ratesData.state === "loading..." ? (
-          <InformationLoader>
-            <CircleLoading />
-            Loading data from the European Central Bank
-          </InformationLoader>
-        ) : ratesData.state === "error" ? (
-          <InformationLoader>
-            No Internet.
-            Try: Checking the network cables, modem and router
-            Reconnecting to Wi-Fi
-          </InformationLoader>
-        ) : (
-        <>
           <StyledParagraph>*fields required</StyledParagraph>
           <Clock />
             <List>
@@ -102,9 +87,7 @@ export const Form = () => {
               </Item>
             </List>
             <Button title="count amount" />
-            <UpdateText>Last update {ratesData.date}</UpdateText>
-          </>
-        )}
+            {/* <UpdateText>Last update {ratesData.date}</UpdateText> */}
       </Fieldset>
     </form>
   ); 
