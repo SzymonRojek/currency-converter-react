@@ -13,6 +13,7 @@ import {
   List,
   StyledSpan,
   Item,
+  UpdateText
 } from './styled';
 
 export const Form = () => {
@@ -87,7 +88,7 @@ export const Form = () => {
               </Item>
             </List>
             <Button title="count amount" />
-            {/* <UpdateText>Last update {ratesData.date}</UpdateText> */}
+            <UpdateText>Last update {ratesData.date}</UpdateText>
       </Fieldset>
     </form>
   ); 

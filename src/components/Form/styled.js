@@ -67,8 +67,9 @@ export const StyledSpan = styled.span`
   background-color: ${({ theme }) => theme.backgroundColor.label};
 `;
 
-export const LoadingText = styled.p`
+export const UpdateText = styled.p`
  color: ${ ({ theme }) => theme.color.tertiary};
+ margin-top: 40px;
  font-size: 15px;
  text-align: right;
 `;
