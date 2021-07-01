@@ -13,7 +13,7 @@ import {
   List,
   StyledSpan,
   Item,
-  UpdateText
+  UpdateDate,
 } from './styled';
 
 export const Form = () => {
@@ -24,7 +24,7 @@ export const Form = () => {
 
   const ratesData = useApiRates('https://api.exchangerate.host/latest');
 
-  const calculateResult = (currencyFrom, currencyTo, amount) => {
+  const calculateResult = () => {
     const rate = ratesData.rates[currencyFrom];
     const sourceRate = ratesData.rates[currencyTo];
 
@@ -42,8 +42,7 @@ export const Form = () => {
 
   const onFormSubmit = event => {
     event.preventDefault();
-  
-    calculateResult(currencyFrom, currencyTo, amount);
+    calculateResult();
     clearInput();
   };
 
@@ -88,7 +87,7 @@ export const Form = () => {
               </Item>
             </List>
             <Button title="count amount" />
-            <UpdateText>Last update: {ratesData.date}</UpdateText>
+            <UpdateDate>Last update: {ratesData.date}</UpdateDate>
       </Fieldset>
     </form>
   ); 
