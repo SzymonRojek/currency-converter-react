@@ -49,45 +49,45 @@ export const Form = () => {
   return ratesData.state ? <Loader /> : (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
-          <StyledParagraph>*fields required</StyledParagraph>
-          <Clock />
-            <List>
-              <Item>
-                <label>
-                  <StyledSpan>Currency from*:</StyledSpan>
-                  <Select
-                    rates={ratesData.rates}
-                    value={currencyFrom} 
-                    onChange={setCurrencyFrom} 
-                  />
-                </label>
-              </Item>
-              <Item secondItem>
-                <label>
-                  <StyledSpan>Currency to*:</StyledSpan>
-                  <Select 
-                    rates={ratesData.rates}
-                    value={currencyTo} 
-                    onChange={setCurrencyTo} 
-                  />
-                </label>
-              </Item>
-              <Item>
-                <Input 
-                  setAmount={setAmount}
-                  inputTypedAmount={inputTypedAmount}
-                  currencyFrom={currencyFrom}
-                />
-              </Item>
-              <Item lastItem>
-                <Result 
-                  result={result} 
-                />
-                
-              </Item>
-            </List>
-            <Button title="count amount" />
-            <UpdateDate>Last update: {ratesData.date}</UpdateDate>
+        <StyledParagraph>*fields required</StyledParagraph>
+        <Clock />
+        <List>
+          <Item>
+            <label>
+              <StyledSpan>Currency from*:</StyledSpan>
+              <Select
+                rates={ratesData.rates}
+                value={currencyFrom} 
+                onChange={setCurrencyFrom} 
+              />
+            </label>
+          </Item>
+          <Item secondItem>
+            <label>
+              <StyledSpan>Currency to*:</StyledSpan>
+              <Select 
+                rates={ratesData.rates}
+                value={currencyTo} 
+                onChange={setCurrencyTo} 
+              />
+            </label>
+          </Item>
+          <Item>
+            <Input 
+              setAmount={setAmount}
+              inputTypedAmount={inputTypedAmount}
+              currencyFrom={currencyFrom}
+            />
+          </Item>
+          <Item lastItem>
+            <Result 
+              result={result} 
+            />
+            
+          </Item>
+        </List>
+        <Button title="count amount" />
+        <UpdateDate>Last update: {ratesData.date}</UpdateDate>
       </Fieldset>
     </form>
   ); 

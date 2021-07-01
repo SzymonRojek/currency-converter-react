@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Fieldset = styled.fieldset`
   box-shadow: 6px 6px 19px 0px ${({ theme }) => theme.accent.greyShadow};
