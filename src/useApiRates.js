@@ -8,7 +8,7 @@ export const useApiRates = url => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch("https://api.exchangerate.host/latest");
 
         if (!response.ok) {
           throw new Error(response.statusText);
@@ -29,7 +29,7 @@ export const useApiRates = url => {
       });
     };
 
-  },[url]);
+  },[]);
   
   return ratesData;
 };

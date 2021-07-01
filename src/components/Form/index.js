@@ -22,7 +22,7 @@ export const Form = () => {
   const [currencyTo, setCurrencyTo] = useState("PLN");
   const [result, setResult] = useState({});
 
-  const ratesData = useApiRates("https://api.exchangerate.host/latest");
+  const ratesData = useApiRates();
 
   const calculateResult = () => {
     const rate = ratesData.rates[currencyFrom];
