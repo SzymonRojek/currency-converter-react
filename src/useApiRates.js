@@ -16,7 +16,7 @@ export const useApiRates = url => {
 
         const parsedData = await response.json();
         setRatesData({
-          data: parsedData.date,
+          date: parsedData.date,
           rates: parsedData.rates,
         });
 

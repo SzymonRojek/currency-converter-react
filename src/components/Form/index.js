@@ -88,7 +88,7 @@ export const Form = () => {
               </Item>
             </List>
             <Button title="count amount" />
-            <UpdateText>Last update {ratesData.date}</UpdateText>
+            <UpdateText>Last update: {ratesData.date}</UpdateText>
       </Fieldset>
     </form>
   ); 
