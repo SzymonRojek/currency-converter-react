@@ -21,11 +21,11 @@ export const theme = {
     fieldsetOverlay: colorNames.geyser,
     label: colorNames.ziggurat,
     field: colorNames.trout,
-    button: colorNames.trout,
     boxClock: colorNames.aliceBlue,
   },
-  active: {
-    button: colorNames.tuna
+  button: {
+    active: colorNames.tuna,
+    backgroundColor: colorNames.trout,
   },
   image: {
     url: 'https://www.researchgate.net/profile/M-Basri/publication/320925728/figure/fig3/AS:631619933192230@1527601335529/India-GDP-Growth-Interest-Rate-Forex-Reserves-Exchange-Rates-and-Current-Account.png'

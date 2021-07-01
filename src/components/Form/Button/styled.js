@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   border-radius: 3px;
   border: none;
   color: ${({ theme }) => theme.color.primary};
-  background-color: ${({ theme }) => theme.backgroundColor.button};
+  background-color: ${({ theme }) => theme.button.backgroundColor};
   box-shadow: 0 10px 20px ${({ theme }) => theme.accent.darkShadow};
   letter-spacing: 1px;
   outline: none;
@@ -25,7 +25,7 @@ export const StyledButton = styled.button`
   }
 
   &:active {
-    background-color: ${({ theme }) => theme.active.button};
+    background-color: ${({ theme }) => theme.button.active};
     transform: translateY(3px);
   }
 `;
