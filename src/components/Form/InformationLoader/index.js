@@ -1,7 +1,7 @@
 import { useApiRates } from "../../../useApiRates";
 import {
   InformationLoader,
-  CircleLoading,
+  LoadingCircle,
   LoadingText,
 } from './styled';
 
@@ -12,14 +12,15 @@ export const Loader = () => {
     <InformationLoader>
       {state === "loading..." ? 
       <> 
-        <CircleLoading /> 
+        <LoadingCircle /> 
         <LoadingText>
           Updating data from the European Central Bank
         </LoadingText> 
       </> : ""}
       {state === "error" ? 
       <LoadingText>
-        Something went wrong. Please check your internet connection and try again later.
+        Something went wrong. 
+        Please check your internet connection and try again later.
       </LoadingText>
       : ""}
     </InformationLoader>

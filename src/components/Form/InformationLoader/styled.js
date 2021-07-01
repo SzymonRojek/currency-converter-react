@@ -21,7 +21,7 @@ const rotate = keyframes`
   }
 `;
 
-export const CircleLoading=styled.div` width: 40px;
+export const LoadingCircle=styled.div` width: 40px;
   height: 40px;
   margin: 50px auto;
   border: solid 4px ${({ theme }) => theme.accent.border};
