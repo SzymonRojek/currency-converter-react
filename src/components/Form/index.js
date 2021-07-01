@@ -47,7 +47,7 @@ export const Form = () => {
     clearInput();
   };
 
-  return ratesData.state ? <Loader ratesData={ratesData} /> : (
+  return ratesData.state ? <Loader /> : (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
           <StyledParagraph>*fields required</StyledParagraph>

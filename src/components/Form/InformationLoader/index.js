@@ -8,6 +8,7 @@ import {
 export const Loader = () => {
   const ratesData = useApiRates();
   const state = ratesData.state;
+
   return (
     <InformationLoader>
       {state === "loading..." ? 
