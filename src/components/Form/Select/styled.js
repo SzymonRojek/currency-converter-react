@@ -6,7 +6,35 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledSelect = styled.select`
-  ${baseFormControlStyles}
+  padding: 8px 30px 8px 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-color: ${({ theme }) => theme.backgroundColor.field};
+  box-shadow: 0 10px 20px ${({ theme }) => theme.accent.darkShadow};
+  border: none;
+  border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  outline: none;
+  min-height: 35px;
+  width: 100%;
+  color: ${({ theme }) => theme.color.primary};
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.color.secondary};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoint.ipad}px) {
+    padding: 15px;
+    font-size: 18px;
+  }
   cursor: pointer; 
 `;
 

@@ -21,6 +21,7 @@ export const Input = ({ amount, setAmount, inputTypedAmount, currencyFrom }) => 
         step="0.01" 
         placeholder="type here" 
         required
+        as="input"
       />
     </Wrapper>
   </Label>
