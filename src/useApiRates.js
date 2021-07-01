@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useApiRates = url => {
   const [ratesData, setRatesData] = useState({
-    state: "loading...",
+    status: "loading...",
   });
 
   useEffect(() => {
@@ -18,14 +18,14 @@ export const useApiRates = url => {
         setRatesData({ date, rates });
 
       } catch (error) {
-        setRatesData({ state: "error"});
+        setRatesData({ status: "error"});
       }
     };
     setTimeout(fetchData, 1 * 1_000);
 
     return () => {
       setRatesData({
-        state: "loading...",
+        status: "loading...",
       });
     };
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { baseFormControlStyles } from '../Input/styled';
 
 export const Wrapper = styled.div`
    position: relative;

@@ -7,18 +7,18 @@ import {
 
 export const Loader = () => {
   const ratesData = useApiRates();
-  const state = ratesData.state;
+  const status = ratesData.status;
 
   return (
     <InformationLoader>
-      {state === "loading..." ? 
+      {status === "loading..." ? 
       <> 
         <LoadingCircle /> 
         <LoadingText>
           Updating data from the European Central Bank
         </LoadingText> 
       </> : ""}
-      {state === "error" ? 
+      {status === "error" ? 
       <LoadingText>
         Something went wrong. 
         Please check your internet connection and try again later.
