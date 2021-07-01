@@ -33,6 +33,8 @@ export const theme = {
   accent: {
     boxArrow: colorNames.tuna,
     arrow: colorNames.ebb,
+    border: colorNames.ebb,
+    borderTop: colorNames.blumine,
     greyShadow: "rgba(47, 50, 50, 0.54)",
     darkShadow: "rgba(0, 0, 0, .5)"
   },
