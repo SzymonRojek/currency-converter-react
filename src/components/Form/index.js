@@ -22,7 +22,7 @@ export const Form = () => {
   const [currencyTo, setCurrencyTo] = useState("PLN");
   const [result, setResult] = useState({});
 
-  const ratesData = useApiRates('https://api.exchangerate.host/lates');
+  const ratesData = useApiRates('https://api.exchangerate.host/latest');
 
   const calculateResult = (currencyFrom, currencyTo, amount) => {
     const rate = ratesData.rates[currencyFrom];
@@ -47,7 +47,7 @@ export const Form = () => {
     clearInput();
   };
 
-  return ratesData.state ? <Loader /> : (
+  return ratesData.state ? <Loader ratesData={ratesData} /> : (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
           <StyledParagraph>*fields required</StyledParagraph>

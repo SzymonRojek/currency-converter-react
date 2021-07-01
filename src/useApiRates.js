@@ -6,7 +6,7 @@ export const useApiRates = url => {
   });
 
   useEffect(() => {
-    (async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch(url);
 
@@ -14,14 +14,25 @@ export const useApiRates = url => {
           throw new Error(response.statusText);
         }
 
-        const data = await response.json();
-        setRatesData(data);
+        const parsedData = await response.json();
+        setRatesData({
+          data: parsedData.date,
+          rates: parsedData.rates,
+        });
 
       } catch (error) {
         setRatesData({ state: "error"});
       }
-    })();
-  }, [url]);
+    };
+    setTimeout(fetchData, 1 * 1_000);
+
+    return () => {
+      setRatesData({
+        state: "loading...",
+      });
+    };
+
+  },[url]);
   
   return ratesData;
 };
