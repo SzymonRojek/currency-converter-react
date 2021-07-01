@@ -14,11 +14,8 @@ export const useApiRates = url => {
           throw new Error(response.statusText);
         }
 
-        const parsedData = await response.json();
-        setRatesData({
-          date: parsedData.date,
-          rates: parsedData.rates,
-        });
+        const { date, rates } = await response.json();
+        setRatesData({ date, rates });
 
       } catch (error) {
         setRatesData({ state: "error"});
