@@ -23,7 +23,7 @@ export const Form = () => {
   const [result, setResult] = useState({});
 
   const ratesData = useApiRates();
-
+console.log(ratesData.rates)
   const calculateResult = () => {
     const rate = ratesData.rates[currencyFrom];
     const sourceRate = ratesData.rates[currencyTo];
@@ -46,7 +46,7 @@ export const Form = () => {
     clearInput();
   };
 
-  return ratesData.status ? <Loader /> : (
+  return ratesData.status !== "success" ? <Loader /> : (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
         <StyledParagraph>*fields required</StyledParagraph>

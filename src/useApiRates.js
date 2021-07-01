@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-export const useApiRates = url => {
+export const useApiRates = () => {
   const [ratesData, setRatesData] = useState({
-    status: "loading...",
+    status: "loading",
   });
 
   useEffect(() => {
@@ -15,17 +15,17 @@ export const useApiRates = url => {
         }
 
         const { date, rates } = await response.json();
-        setRatesData({ date, rates });
+        setRatesData({ date, rates, status: "success" });
 
       } catch (error) {
         setRatesData({ status: "error"});
       }
     };
-    setTimeout(fetchData, 1 * 1_000);
+    setTimeout(fetchData, 1_000);
 
     return () => {
       setRatesData({
-        status: "loading...",
+        status: "loading",
       });
     };
 

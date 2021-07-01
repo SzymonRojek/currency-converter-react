@@ -11,18 +11,18 @@ export const Loader = () => {
 
   return (
     <InformationLoader>
-      {status === "loading..." ? 
+      {status === "loading" && 
       <> 
         <LoadingCircle /> 
         <LoadingText>
           Updating data from the European Central Bank
         </LoadingText> 
-      </> : ""}
-      {status === "error" ? 
+      </>}
+      {status === "error" && 
       <LoadingText>
         Something went wrong. 
         Please check your internet connection and try again later.
       </LoadingText>
-      : ""}
+      }
     </InformationLoader>
 )};

@@ -1,4 +1,3 @@
-
 import styled, { keyframes } from 'styled-components';
 
 export const InformationLoader = styled.div` 
@@ -14,14 +13,15 @@ export const InformationLoader = styled.div`
 
 const rotate = keyframes` 
   from {
-    transform: rotate(0deg);
+    transform: none;
   }
   to {
     transform: rotate(360deg);
   }
 `;
 
-export const LoadingCircle=styled.div` width: 40px;
+export const LoadingCircle = styled.div` 
+  width: 40px;
   height: 40px;
   margin: 50px auto;
   border: solid 4px ${({ theme }) => theme.accent.border};
