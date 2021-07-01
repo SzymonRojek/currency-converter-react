@@ -3,8 +3,6 @@
 
 ## Preview site :arrow_right: [tap here](https://szymonrojek.github.io/currency-converter-react/)
 
-<img src="./images/currency-converter.gif" width="300" height="450">
-
 <br>
 
 ## Used technologies:
