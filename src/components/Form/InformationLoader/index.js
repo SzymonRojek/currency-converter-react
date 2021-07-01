@@ -19,7 +19,7 @@ export const Loader = () => {
       </> : ""}
       {ratesData.state === "error" ? 
       <LoadingText>
-        Probably there is no internet. Check the network cables, modem or router
+        Something went wrong. Please check your internet connection and try again later.
       </LoadingText>
       : ""}
     </InformationLoader>

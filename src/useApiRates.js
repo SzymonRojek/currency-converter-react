@@ -1,33 +1,27 @@
 import { useState, useEffect } from "react";
 
-export const useApiRates = () => {
+export const useApiRates = url => {
   const [ratesData, setRatesData] = useState({
     state: "loading...",
   });
 
   useEffect(() => {
-    const getApiRates = () => {
-      const promise = fetch("https://api.exchangerate.host/latest");
+    (async () => {
+      try {
+        const response = await fetch(url);
 
-        promise
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(response.statusText);
-            }
-            return response;
-          })
-          .then(response => response.json())
-          .then(response =>
-            setRatesData({
-              date: response.date,
-              rates: response.rates,
-            })
-          )
-          .catch(setRatesData({ state: "error" }));
-    };
-    setTimeout(getApiRates, 1 * 2_000);
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
 
-  }, []);
+        const data = await response.json();
+        setRatesData(data);
+
+      } catch (error) {
+        setRatesData({ state: "error"});
+      }
+    })();
+  }, [url]);
   
   return ratesData;
 };

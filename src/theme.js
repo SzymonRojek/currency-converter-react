@@ -10,7 +10,6 @@ const colorNames = {
   ebb: "rgba(255, 255, 255, 0.79)",
 }
 
-
 export const theme = {
   color: {
     primary: colorNames.ebb,
@@ -23,7 +22,7 @@ export const theme = {
     label: colorNames.ziggurat,
     field: colorNames.trout,
     button: colorNames.trout,
-    boxClock: colorNames.aliceBlue
+    boxClock: colorNames.aliceBlue,
   },
   active: {
     button: colorNames.tuna
