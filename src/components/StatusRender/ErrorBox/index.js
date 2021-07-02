@@ -1,14 +1,14 @@
 import {
   SorryIcon,
-  LoadingText,
+  ErrorText,
 } from './styled';
 
 export const ErrorBox = () => (
   <>
     <SorryIcon />
-    <LoadingText>
+    <ErrorText>
       Something went wrong. 
       Please check your internet connection and try again later.
-    </LoadingText>
+    </ErrorText>
   </>
 );

@@ -1,5 +1,5 @@
 import { useApiRates } from "../../useApiRates";
-import { Loader } from './Loader';
+import { Loader } from './InformationLoader';
 import { ErrorBox } from './ErrorBox';
 import { Form } from './Form';
 

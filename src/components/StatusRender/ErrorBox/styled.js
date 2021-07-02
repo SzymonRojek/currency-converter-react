@@ -10,8 +10,9 @@ export const SorryIcon = styled.img.attrs({
   max-width: 400px;
 `;
 
-export const LoadingText = styled.p`
+export const ErrorText = styled.p`
   font-size: 25px;
   line-height: 1.5;
+  text-align: center;
   color: ${({ theme }) => theme.color.primary};
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledSelect } from '../Select/styled'
+import { StyledSelect } from '../Select/styled';
 
 export const Label = styled.label`
   margin-top: 120px;

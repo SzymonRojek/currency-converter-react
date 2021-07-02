@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { ErrorText } from '../ErrorBox/styled';
 
 export const InformationLoader = styled.div` 
   width: 100%;
@@ -30,8 +31,4 @@ export const LoadingCircle = styled.div`
   animation: ${rotate} 1.5s linear infinite;
 `;
 
-export const LoadingText = styled.p`
-  font-size: 25px;
-  line-height: 1.5;
-  color: ${({ theme }) => theme.color.primary};
-`;
+export const LoadingText = styled(ErrorText)``;
