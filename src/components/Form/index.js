@@ -23,7 +23,7 @@ export const Form = () => {
   const [result, setResult] = useState({});
 
   const ratesData = useApiRates();
-console.log(ratesData.rates)
+
   const calculateResult = () => {
     const rate = ratesData.rates[currencyFrom];
     const sourceRate = ratesData.rates[currencyTo];

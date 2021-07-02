@@ -3,14 +3,18 @@ import { useState, useEffect } from "react";
 export const useApiRates = () => {
   const [ratesData, setRatesData] = useState({
     status: "loading",
+    date: null,
+    rates: null,
   });
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch("https://api.exchangerate.host/latest");
+      const addressAPI = "https://api.exchangerate.host/latest";
 
-        if (!response.ok) {
+      try {
+        const response = await fetch(addressAPI);
+
+        if (!response.ok || addressAPI !== "https://api.exchangerate.host/latest") {
           throw new Error(response.statusText);
         }
 
@@ -29,7 +33,7 @@ export const useApiRates = () => {
       });
     };
 
-  },[]);
+  }, []);
   
   return ratesData;
 };
