@@ -8,13 +8,18 @@ export const useApiRates = () => {
   });
 
   useEffect(() => {
-    const fetchData = async () => {
-      const addressAPI = "https://api.exchangerate.host/latest";
+    const addressAPI = "https://api.exchangerate.host/latestkk";
+    const correctAddressAPI = "https://api.exchangerate.host/latest";
 
+    if (addressAPI !== correctAddressAPI) {
+      setRatesData({ status: "error" });
+    } else {
+
+    const fetchData = async () => {
       try {
         const response = await fetch(addressAPI);
 
-        if (!response.ok || addressAPI !== "https://api.exchangerate.host/latest") {
+        if (!response.ok) {
           throw new Error(response.statusText);
         }
 
@@ -25,8 +30,9 @@ export const useApiRates = () => {
         setRatesData({ status: "error"});
       }
     };
+  
     setTimeout(fetchData, 1_000);
-
+  }
     return () => {
       setRatesData({
         status: "loading",
