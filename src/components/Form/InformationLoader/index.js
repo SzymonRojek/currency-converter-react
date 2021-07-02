@@ -1,8 +1,10 @@
 import { useApiRates } from "../../../useApiRates";
+
 import {
   InformationLoader,
   LoadingCircle,
   LoadingText,
+  SorryIcon
 } from './styled';
 
 export const InformationAPI = () => {
@@ -20,10 +22,13 @@ export const InformationAPI = () => {
         </>
       }
       {status === "error" && 
-        <LoadingText>
-          Something went wrong. 
-          Please check your internet connection and try again later.
-        </LoadingText>
+        <>
+          <SorryIcon />
+          <LoadingText>
+            Something went wrong. 
+            Please check your internet connection and try again later.
+          </LoadingText>
+        </>
       }
     </InformationLoader>
 )};
