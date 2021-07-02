@@ -5,7 +5,7 @@ import {
   LoadingText,
 } from './styled';
 
-export const Loader = () => {
+export const InformationAPI = () => {
   const ratesData = useApiRates();
   const status = ratesData.status;
 

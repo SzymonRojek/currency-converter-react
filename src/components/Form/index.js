@@ -5,7 +5,7 @@ import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
 import { useApiRates } from "../../useApiRates";
-import { Loader} from "./InformationLoader";
+import { InformationAPI} from "./InformationLoader";
 
 import {
   Fieldset,
@@ -46,7 +46,7 @@ export const Form = () => {
     clearInput();
   };
 
-  return ratesData.status !== "success" ? <Loader /> : (
+  return ratesData.status !== "success" ? <InformationAPI /> : (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
         <StyledParagraph>*fields required</StyledParagraph>
