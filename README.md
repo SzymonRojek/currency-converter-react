@@ -9,15 +9,15 @@
 
 <table>
   <tr>
-    <td><img src="./images/npm-icon.png" width="70" height="70"></td>
-    <td><img src="./images/jsx-icon.png" width="70" height="70"></td>
-    <td><img src="./images/react.jpeg" width="100" height="60"></td>
+    <td><img src="./src/images/npm-icon.png" width="70" height="70"></td>
+    <td><img src="./src/images/jsx-icon.png" width="70" height="70"></td>
+    <td><img src="./src/images/react.jpeg" width="100" height="60"></td>
   </tr>
 </table>
 <table>
   <tr>
-    <td><img src="./images/flexbox-icon.jpeg" width="80" height="80"></td>
-    <td><img src="./images/css-icon.svg" width="75" height="70"> </td>
+    <td><img src="./src/images/flexbox-icon.jpeg" width="80" height="80"></td>
+    <td><img src="./src/images/css-icon.svg" width="75" height="70"> </td>
   </tr>
  </table>
 
