@@ -4,8 +4,7 @@ import { Input } from './Input';
 import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
-import { useApiRates } from "../../useApiRates";
-import { InformationAPI} from "./InformationLoader";
+import { useApiRates } from "../../../useApiRates";
 
 import {
   Fieldset,
@@ -46,7 +45,7 @@ export const Form = () => {
     clearInput();
   };
 
-  return ratesData.status !== "success" ? <InformationAPI /> : (
+  return ratesData.status === "success" && (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
         <StyledParagraph>*fields required</StyledParagraph>
@@ -80,10 +79,7 @@ export const Form = () => {
             />
           </Item>
           <Item lastItem>
-            <Result 
-              result={result} 
-            />
-            
+            <Result result={result} />
           </Item>
         </List>
         <Button title="count amount" />
