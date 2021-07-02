@@ -7,5 +7,5 @@ export const StatusRender = () => {
   const ratesData = useApiRates();
   const status = ratesData.status;
 
-  return status === "loading" ? <Loader /> : status === "error" ? <ErrorBox /> : status === "success" ?<Form />  : "";
+  return status === "loading" ? <Loader /> : status === "error" ? <ErrorBox /> : <Form />;
 }
