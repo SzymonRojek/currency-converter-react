@@ -4,7 +4,9 @@ import { Input } from './Input';
 import { Select } from './Select';
 import { Button } from './Button'; 
 import { Clock } from './Clock';
-import { useApiRates } from "../../../useApiRates";
+import { Loader } from './Loader';
+import { ErrorBox } from './ErrorBox';
+import { useApiRates } from '../../useApiRates';
 
 import {
   Fieldset,
@@ -22,6 +24,7 @@ export const Form = () => {
   const [result, setResult] = useState({});
 
   const ratesData = useApiRates();
+  const status = ratesData.status;
 
   const calculateResult = () => {
     const rate = ratesData.rates[currencyFrom];
@@ -45,7 +48,7 @@ export const Form = () => {
     clearInput();
   };
 
-  return ratesData.status === "success" && (
+  return status ==="loading" ? <Loader /> : status === "error" ? <ErrorBox /> : status === "success" && (
     <form onSubmit={onFormSubmit}>
       <Fieldset>
         <StyledParagraph>*fields required</StyledParagraph>
