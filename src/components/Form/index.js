@@ -25,7 +25,7 @@ export const Form = () => {
 
   const ratesData = useApiRates();
   const status = ratesData.status;
-
+  
   const calculateResult = () => {
     const rate = ratesData.rates[currencyFrom];
     const sourceRate = ratesData.rates[currencyTo];
@@ -48,46 +48,55 @@ export const Form = () => {
     clearInput();
   };
 
-  return status ==="loading" ? <Loader /> : status === "error" ? <ErrorBox /> : status === "success" && (
-    <form onSubmit={onFormSubmit}>
-      <Fieldset>
-        <StyledParagraph>*fields required</StyledParagraph>
-        <Clock />
-        <List>
-          <Item>
-            <label>
-              <StyledSpan>Currency from*:</StyledSpan>
-              <Select
-                rates={ratesData.rates}
-                value={currencyFrom} 
-                onChange={setCurrencyFrom} 
-              />
-            </label>
-          </Item>
-          <Item secondItem>
-            <label>
-              <StyledSpan>Currency to*:</StyledSpan>
-              <Select 
-                rates={ratesData.rates}
-                value={currencyTo} 
-                onChange={setCurrencyTo} 
-              />
-            </label>
-          </Item>
-          <Item>
-            <Input 
-              setAmount={setAmount}
-              inputTypedAmount={inputTypedAmount}
-              currencyFrom={currencyFrom}
-            />
-          </Item>
-          <Item lastItem>
-            <Result result={result} />
-          </Item>
-        </List>
-        <Button title="count amount" />
-        <UpdateDate>Last update: {ratesData.date}</UpdateDate>
-      </Fieldset>
-    </form>
-  ); 
+  switch (status) {
+    case "loading":
+      return <Loader />;
+    case "error":
+      return <ErrorBox />
+    case "success":
+      return (
+        <form onSubmit={onFormSubmit}>
+          <Fieldset>
+            <StyledParagraph>*fields required</StyledParagraph>
+            <Clock />
+            <List>
+              <Item>
+                <label>
+                  <StyledSpan>Currency from*:</StyledSpan>
+                  <Select
+                    rates={ratesData.rates}
+                    value={currencyFrom} 
+                    onChange={setCurrencyFrom} 
+                  />
+                </label>
+              </Item>
+              <Item secondItem>
+                <label>
+                  <StyledSpan>Currency to*:</StyledSpan>
+                  <Select 
+                    rates={ratesData.rates}
+                    value={currencyTo} 
+                    onChange={setCurrencyTo} 
+                  />
+                </label>
+              </Item>
+              <Item>
+                <Input 
+                  setAmount={setAmount}
+                  inputTypedAmount={inputTypedAmount}
+                  currencyFrom={currencyFrom}
+                />
+              </Item>
+              <Item lastItem>
+                <Result result={result} />
+              </Item>
+            </List>
+            <Button title="count amount" />
+            <UpdateDate>Last update: {ratesData.date}</UpdateDate>
+          </Fieldset>
+        </form>
+    );
+    default:
+      return "";
+  };
 };
