@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useApiRates = () => {
-  const [ratesData, setRatesData] = useState({
+  let [ratesData, setRatesData] = useState({
     status: "loading",
     date: null,
     rates: null,
@@ -13,14 +13,14 @@ export const useApiRates = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(apiUrl);
-      
+       
         if (!response.ok) {
           throw new Error(response.statusText);
         }
 
         const { date, rates } = await response.json();
-        setRatesData({ date, rates, status: "success" });
-
+        setRatesData({ date, rates, status: rates ? "success" : "error" });
+        
       } catch (error) {
         setRatesData({ status: "error"});
       }
