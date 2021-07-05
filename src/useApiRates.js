@@ -8,10 +8,6 @@ export const useApiRates = () => {
   });
 
   useEffect(() => {
-    if (ratesData.status === "error") {
-      return;
-    }
-
     const apiUrl = "https://api.exchangerate.host/latest";
 
     const fetchData = async () => {
@@ -23,7 +19,12 @@ export const useApiRates = () => {
         }
 
         const { date, rates } = await response.json();
-        setRatesData({ date, rates, status: rates ? "success" : "error" });
+
+        if (!rates) {
+         throw new Error(console.error(`rates are undefined or null`));
+        }
+
+        setRatesData({ date, rates, status: "success" });
         
       } catch (error) {
         setRatesData({ status: "error"});
