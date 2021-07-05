@@ -1,13 +1,14 @@
-
 const colorNames = {
-  blumine: "#186889",
-  astral: "#2E86ABC4",
-  tuna: "#3b3c47",
   aliceBlue: "#f0f9ff",
-  trout: "#4d5061c1",
+  ebb: "rgba(255, 255, 255, 0.79)",
   ziggurat: "#BCD5E4",
   geyser: "#CFDde3c3",
-  ebb: "rgba(255, 255, 255, 0.79)",
+  blumine: "#186889",
+  astral: "#2E86ABC4",
+  trout: "#4d5061c1",
+  tuna: "#3b3c47",
+  darkGrey: "rgba(47, 50, 50, 0.54)",
+  dark: "rgba(0, 0, 0, .5)",
 }
 
 export const theme = {
@@ -22,6 +23,8 @@ export const theme = {
     label: colorNames.ziggurat,
     field: colorNames.trout,
     boxClock: colorNames.aliceBlue,
+    eye: colorNames.ebb,
+    mouth: colorNames.ebb,
   },
   button: {
     active: colorNames.tuna,
@@ -35,10 +38,10 @@ export const theme = {
     arrow: colorNames.ebb,
     border: colorNames.ebb,
     borderTop: colorNames.blumine,
-    greyShadow: "rgba(47, 50, 50, 0.54)",
-    darkShadow: "rgba(0, 0, 0, .5)"
+    greyShadow: colorNames.darkGrey,
+    darkShadow: colorNames.dark,
   },
   breakpoint: {
-    ipad: 768
+    ipad: 768,
   }
 };
