@@ -97,6 +97,6 @@ export const Form = () => {
         </form>
     );
     default:
-      return "";
+      throw new Error(`incorrect status: ${status}`);
   };
 };
