@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useApiRates = () => {
   let [ratesData, setRatesData] = useState({
-    status: "error",
+    status: "loading",
     date: null,
     rates: null,
   });
