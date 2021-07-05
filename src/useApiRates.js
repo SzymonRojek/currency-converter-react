@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 
 export const useApiRates = () => {
   let [ratesData, setRatesData] = useState({
-    status: "loading",
+    status: "error",
     date: null,
     rates: null,
   });
 
   useEffect(() => {
+    if (ratesData.status === "error") {
+      return;
+    }
+
     const apiUrl = "https://api.exchangerate.host/latest";
 
     const fetchData = async () => {
