@@ -21,7 +21,7 @@ export const useApiRates = () => {
         const { date, rates } = await response.json();
 
         if (!rates) {
-         throw new Error(console.error(`rates are undefined or null`));
+         throw new Error("Something happened - no data");
         }
 
         setRatesData({ date, rates, status: "success" });
@@ -34,5 +34,5 @@ export const useApiRates = () => {
       setTimeout(fetchData, 1_000);
   }, []);
   
-  return ratesData;
+  return  ratesData ;
 };
