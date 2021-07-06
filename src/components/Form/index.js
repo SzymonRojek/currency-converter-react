@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { Result } from './Result';
 import { Input } from './Input';
 import { Select } from './Select';
@@ -7,6 +7,7 @@ import { Clock } from './Clock';
 import { Loader } from './Loader';
 import { ErrorBox } from './ErrorBox';
 import { useApiRates } from '../../useApiRates';
+import { useResult } from './useResult';
 
 import {
   Fieldset,
@@ -18,25 +19,17 @@ import {
 } from './styled';
 
 export const Form = () => {
-  const [amount, setAmount] = useState();
-  const [currencyFrom, setCurrencyFrom] = useState("GBP");
-  const [currencyTo, setCurrencyTo] = useState("PLN");
-  const [result, setResult] = useState({});
-
-  const ratesData = useApiRates();
-  const status = ratesData.status;
+  const { date, rates, status } = useApiRates();
   
-  const calculateResult = () => {
-    const rate = ratesData.rates[currencyFrom];
-    const sourceRate = ratesData.rates[currencyTo];
-
-    setResult({
-      amount,
-      calculatedAmount: +amount * sourceRate / rate,
-      currencyFrom,
-      currencyTo,
-    });
-  };
+  const {
+    setAmount,
+    currencyFrom,
+    setCurrencyFrom,
+    currencyTo,
+    setCurrencyTo,
+    result,
+    calculateResult,
+  } = useResult();
 
   const inputTypedAmount = useRef();
   
@@ -44,7 +37,7 @@ export const Form = () => {
 
   const onFormSubmit = event => {
     event.preventDefault();
-    calculateResult();
+    calculateResult(rates);
     clearInput();
   };
 
@@ -64,7 +57,7 @@ export const Form = () => {
                 <label>
                   <StyledSpan>Currency from*:</StyledSpan>
                   <Select
-                    rates={ratesData.rates}
+                    rates={rates}
                     value={currencyFrom} 
                     onChange={setCurrencyFrom} 
                   />
@@ -74,7 +67,7 @@ export const Form = () => {
                 <label>
                   <StyledSpan>Currency to*:</StyledSpan>
                   <Select 
-                    rates={ratesData.rates}
+                    rates={rates}
                     value={currencyTo} 
                     onChange={setCurrencyTo} 
                   />
@@ -92,7 +85,7 @@ export const Form = () => {
               </Item>
             </List>
             <Button title="count amount" />
-            <UpdateDate>Last update: {ratesData.date}</UpdateDate>
+            <UpdateDate>Last update: {date}</UpdateDate>
           </Fieldset>
         </form>
     );
